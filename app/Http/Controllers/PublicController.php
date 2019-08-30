@@ -11,7 +11,7 @@ class PublicController extends Controller
    public function index()
    {
         $data =  DB::table('tours')
-             ->select('tours.nombre as nombretour','tipo_categoria_tours.nombre as categoriatour','tours.img','tours.slug')
+             ->select('tours.nombre as nombretour','tipo_categoria_tours.nombre as categoriatour','tours.img','tours.slug','tours.descripcion')
              ->join('tour_categoria','tour_categoria.tour_id','=','tours.id')
              ->join('tipo_categoria_tours','tipo_categoria_tours.id','=','tour_categoria.categoria_id')
              ->paginate(4);

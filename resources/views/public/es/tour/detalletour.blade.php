@@ -1,12 +1,25 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-
+ <!-- breadcrumbs start-->
+      <section style="background-image:url('pic/breadcrumbs/bg-2.jpg'); padding-top: 120px" class="breadcrumbs style-2 gray-90">
+        <div class="container">
+          <div class="text-left breadcrumbs-item">
+            <h2> {{$detalleTour->nombre}}</h2>
+            
+          </div>
+          <div class="breadright"><a href="#" class="cws-button small alt">Get price</a>
+            <p>Best Price Guarantee</p>
+          </div>
+        </div>
+      </section>
+      <!-- ! breadcrumbs end-->
 <div class="content-body">
+
       <section class="page-section pt-0 pb-50">
         <br/>
-        <div class="container">
-            <h4 class="mb-20">{{$detalleTour->nombre}}</h4>
+        <div class="container" >
+            <h4 class="mb-20">{{$detalleTour->descripcion}}</h4>
         </div>
 
         <div class="container">

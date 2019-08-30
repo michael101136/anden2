@@ -61,138 +61,42 @@
             <!--<div class="col-md-12"><img src="/public/pic/promo-1.png" data-at2x="pic/promo-1@2x.png" alt class="mt-md-0 mt-minus-70"></div>-->
           </div>
         </div>
+        <div class="container">
         <div class="row blog-col">
               <!-- Blog Post-->
+              @foreach($data as $item) 
               <div class="col-md-4 col-sm-6 col-xs-6 mb-30">
                 <!-- Blog item-->
                 <div class="blog-item clearfix border boxed">
                   <!-- Blog Image-->
                   <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/1@2x.jpg" data-at2x="pic/blog/270x270/1@2x.jpg" alt=""></div></a></div>
+                      <div class="pic"><img src="{{$item->img}}" style="height: 200px" data-at2x="{{$item->img}}" alt=""></div></a></div>
                   <!-- blog body-->
                   <div class="blog-item-body clearfix">
-                    <!-- title--><a href="blog-single.html">
-                      <h6 class="blog-title">Sed semper lacus et </h6></a>
-                    <div class="blog-item-data">Mon, 03-23-2016</div>
+                    <!-- title--><a href="{{route('detalletour',['tour'=>$item->slug])}}">
+                      <h6 class="blog-title"> {{$item->nombretour}} </h6></a>
                     <!-- Text Intro-->
-                    <p>Etiam maximus molestie accumsan. Sed metus sapien, fermentum nec lorem ac, tempor gravida arcu.</p><a href="blog-single.html" class="blog-button">Read more</a>
+                    <p>{{$item->descripcion}}</p><a href="{{route('detalletour',['tour'=>$item->slug])}}" class="blog-button">Read more</a>
                   </div>
                 </div>
                 <!-- ! Blog item-->
               </div>
+              @endforeach
               <!-- ! Blog Post-->
-              <!-- Blog Post-->
-              <div class="col-md-4 col-sm-6 col-xs-6 mb-30">
-                <!-- Blog item-->
-                <div class="blog-item clearfix border boxed">
-                  <!-- Blog Image-->
-                  <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/2@2x.jpg" data-at2x="pic/blog/270x270/2@2x.jpg" alt=""></div></a></div>
-                  <!-- blog body-->
-                  <div class="blog-item-body clearfix">
-                    <!-- title--><a href="blog-single.html">
-                      <h6 class="blog-title">Aenean nec urna </h6></a>
-                    <div class="blog-item-data">Mon, 03-23-2016</div>
-                    <!-- Text Intro-->
-                    <p>Nullam efficitur lorem eu felis rutrum elementum. Vestibulum feugiat massa id ante scelerisque blandit.</p><a href="blog-single.html" class="blog-button">Read more</a>
-                  </div>
-                </div>
-                <!-- ! Blog item-->
-              </div>
-              <!-- ! Blog Post-->
-              <!-- Blog Post-->
-              <div class="col-md-4 col-sm-6 col-xs-6 mb-30">
-                <!-- Blog item-->
-                <div class="blog-item clearfix border boxed">
-                  <!-- Blog Image-->
-                  <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/3@2x.jpg" data-at2x="pic/blog/270x270/3@2x.jpg" alt=""></div></a></div>
-                  <!-- blog body-->
-                  <div class="blog-item-body clearfix">
-                    <!-- title--><a href="blog-single.html">
-                      <h6 class="blog-title">Etiam sit amet </h6></a>
-                    <div class="blog-item-data">Mon, 03-23-2016</div>
-                    <!-- Text Intro-->
-                    <p>urabitur rhoncus sem et eros pharetra euismod. Ut commodo sem magna, in congue ex vestibulum ut commodo sem magna, in congue ex vestibulum ut.</p><a href="blog-single.html" class="blog-button">Read more</a>
-                  </div>
-                </div>
-                <!-- ! Blog item-->
-              </div>
-              <!-- ! Blog Post-->
-              <!-- Blog Post-->
-              <div class="col-md-4 col-sm-6 col-xs-6 mb-30">
-                <!-- Blog item-->
-                <div class="blog-item clearfix border boxed">
-                  <!-- Blog Image-->
-                  <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/4@2x.jpg" data-at2x="pic/blog/270x270/4@2x.jpg" alt=""></div></a></div>
-                  <!-- blog body-->
-                  <div class="blog-item-body clearfix">
-                    <!-- title--><a href="blog-single.html">
-                      <h6 class="blog-title">Integer venenatis leo </h6></a>
-                    <div class="blog-item-data">Mon, 03-23-2016</div>
-                    <!-- Text Intro-->
-                    <p>Cras tellus orci, ultricies at ornare rhoncus, vehicula ac nibh. Vivamus consectetur eget diam ac mollis.</p><a href="blog-single.html" class="blog-button">Read more</a>
-                  </div>
-                </div>
-                <!-- ! Blog item-->
-              </div>
-              <!-- ! Blog Post-->
-              <!-- Blog Post-->
-              <div class="col-md-4 col-sm-6 col-xs-6 mb-30">
-                <!-- Blog item-->
-                <div class="blog-item clearfix border boxed">
-                  <!-- Blog Image-->
-                  <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/5@2x.jpg" data-at2x="pic/blog/270x270/5@2x.jpg" alt=""></div></a></div>
-                  <!-- blog body-->
-                  <div class="blog-item-body clearfix">
-                    <!-- title--><a href="blog-single.html">
-                      <h6 class="blog-title">Nulla eget purus </h6></a>
-                    <div class="blog-item-data">Mon, 03-23-2016</div>
-                    <!-- Text Intro-->
-                    <p>Ut tincidunt sapien consectetur elit mollis tincidunt. Integer vel ex nec quam gravida posuere vulputate a diam.</p><a href="blog-single.html" class="blog-button">Read more</a>
-                  </div>
-                </div>
-                <!-- ! Blog item-->
-              </div>
-              <!-- ! Blog Post-->
-              <!-- Blog Post-->
-              <div class="col-md-4 col-sm-6 col-xs-6">
-                <!-- Blog item-->
-                <div class="blog-item clearfix border boxed">
-                  <!-- Blog Image-->
-                  <div class="blog-media"><a href="blog-single.html">
-                      <div class="pic"><img src="pic/blog/270x270/6@2x.jpg" data-at2x="pic/blog/270x270/6@2x.jpg" alt=""></div></a></div>
-                  <!-- blog body-->
-                  <div class="blog-item-body clearfix">
-                    <!-- title--><a href="blog-single.html">
-                      <h6 class="blog-title">Maecenas id ligula sed</h6></a>
-                    <div class="blog-item-data">Mon, 03-23-2016</div>
-                    <!-- Text Intro-->
-                    <p>Nam elementum leo ex, nec lacinia ligula malesuada nec. Phasellus bibendum tempor leo, a accumsan justo molestie at.</p><a href="blog-single.html" class="blog-button">Read more</a>
-                  </div>
-                </div>
-                <!-- ! Blog item-->
-              </div>
-              <!-- ! Blog Post-->
+             
             </div>
+          </div>
         <!--
         <div class="features-tours-full-width">
             <div class="features-tours-wrap clearfix">
-          
-          
-
-            @foreach($data as $item)
-    
+            @foreach($data as $item)    
                  <div class="features-tours-item">
                     <div class="features-media"><img src="{{$item->img}}" style="height:200px;" data-at2x="{{$item->img}}" alt>
                     <div class="features-info-top">
                       <div class="info-price font-4"><span> </span> $115</div>
                       <div class="info-temp font-4"><span><button type="button" class="btn btn-default" style="color: #fff; background-color: rgba(0,0,0,0); border-color: #ffc107;"><a href="{{route('detalletour',['tour'=>$item->slug])}}">DETALLE</a></button></span></div>
                       <p class="info-text"></p>
-                    </div>
-          
+                    </div>          
                     <div class="features-info-bot">
                       <h5 class="title" style=" font-size: 14px; position: absolute;margin-top: -55px;  background-color: rgba(0,0,0,.5);border-bottom-right-radius: 20px;padding: 6px;">
                         <a href="{{route('detalletour',['tour'=>$item->slug])}}">  {{$item->nombretour}} </a> <span class="font-4">   </span> </h5>

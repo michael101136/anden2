@@ -37,4 +37,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    public function hasRoles(array $roles)//admin y normal
+    {
+       
+      
+      
+       foreach ($roles as $role) 
+        {
+                if ($this->privilege == $role)
+                {
+                    return true;
+                }       
+
+        }
+       return false;
+    }
+
+    public function language() {
+        return $this->hasOne('App\Language', 'id'); // Le indicamos que se va relacionar con el atributo id
+    }
 }

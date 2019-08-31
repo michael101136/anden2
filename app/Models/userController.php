@@ -59,7 +59,7 @@ class userController extends Model
      */
     public static $rules = [
         'name' => 'required',
-        'email' => ['required', 'email', 'max:255', 'unique:users'],
+        'email' => ['required', 'email', 'max:255'],
     ];
 
     

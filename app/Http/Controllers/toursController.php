@@ -12,6 +12,8 @@ use Flash;
 use Response;
 use DB;
 use Illuminate\Support\Str as Str; 
+use Illuminate\Support\Facades\Auth;
+use App\Helpers\languageUsers;
 class toursController extends AppBaseController
 {
     /** @var  toursRepository */
@@ -21,6 +23,7 @@ class toursController extends AppBaseController
     {
         $this->toursRepository = $toursRepo;
         $this->itinerariosRepository = $itinerariosRepo;
+        $this->middleware(['auth' ,'roles:normal,admin']);
     }
 
     /**
@@ -34,14 +37,16 @@ class toursController extends AppBaseController
     {
         // $tours = $this->toursRepository->all();
 
-       
+      
 
         $tours = DB::table('multimedia')
-            ->select ('multimedia.nombre as nombremultimedia','tours.id','tours.nombre','tours.slug','tours.img','tours.descripcion','tours.estado','tours.principal','tours.organizacion')
+            ->select ('multimedia.nombre as nombremultimedia','tours.id','tours.nombre','tours.slug','tours.img','tours.descripcion','tours.estado','tours.principal','tours.organizacion','languages.nombre as languages')
             ->join('tours','tours.multimedia_id','=','multimedia.id')
+            ->join('tour_categoria','tours.id','=','tour_categoria.tour_id')
+            ->join('tipo_categoria_tours','tipo_categoria_tours.id','=','tour_categoria.categoria_id')
+            ->join('languages','languages.id','=','tipo_categoria_tours.lenguaje_id')
+            ->where('languages.id',languageUsers::idLanguage())
             ->get();
-
-        //dd($tours);
         return view('tours.index')->with('tours', $tours);
     }
 

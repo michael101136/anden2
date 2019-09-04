@@ -16,7 +16,7 @@
 // });
 
 Route::get('/', 'PublicController@index');
-
+Route::get('/es', 'PublicController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

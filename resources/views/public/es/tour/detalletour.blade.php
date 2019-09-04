@@ -2,7 +2,7 @@
 
 @section('content')
  <!-- breadcrumbs start-->
-      <section style="background-image:url('pic/breadcrumbs/bg-2.jpg'); padding-top: 120px" class="breadcrumbs style-2 gray-90">
+      <section style="background-image:url('/public/img/baner-tour.jpg');  padding-top: 120px" class="breadcrumbs style-2 gray-90">
         <div class="container">
           <div class="text-left breadcrumbs-item">
             <h2> {{$detalleTour->nombre}}</h2>

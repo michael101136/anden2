@@ -25,7 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
+Route::view('/about-us','public.es.nosotros');
+Route::view('/reviews','public.es.testimonios');
 Route::resource('tipoAlojamientos', 'TipoAlojamientoController');
 
 Route::resource('categoriaAlojamientos', 'CategoriaAlojamientoController');

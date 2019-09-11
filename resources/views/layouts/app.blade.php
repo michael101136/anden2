@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Andean Adventures</title>
+    <title>TURISMO RURAL COMUNITARIO</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <!-- Bootstrap 3.3.7 -->
@@ -42,7 +42,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>Andean Adventures</b>
+                <b>TURISMO RURAL COMUNITARIO</b>
             </a>
 
             <!-- Header Navbar -->
@@ -105,7 +105,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Company</a>.</strong> All rights reserved.
+            <strong>Copyright © 2019 <a href="#">TURISMO RURAL COMUNITARIO</a>.</strong> .
         </footer>
 
     </div>

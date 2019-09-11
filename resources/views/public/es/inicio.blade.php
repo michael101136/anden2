@@ -86,33 +86,71 @@
              
             </div>
           </div>
-        <!--
-        <div class="features-tours-full-width">
-            <div class="features-tours-wrap clearfix">
-            @foreach($data as $item)    
-                 <div class="features-tours-item">
-                    <div class="features-media"><img src="{{$item->img}}" style="height:200px;" data-at2x="{{$item->img}}" alt>
-                    <div class="features-info-top">
-                      <div class="info-price font-4"><span> </span> $115</div>
-                      <div class="info-temp font-4"><span><button type="button" class="btn btn-default" style="color: #fff; background-color: rgba(0,0,0,0); border-color: #ffc107;"><a href="{{route('detalletour',['tour'=>$item->slug])}}">DETALLE</a></button></span></div>
-                      <p class="info-text"></p>
-                    </div>          
-                    <div class="features-info-bot">
-                      <h5 class="title" style=" font-size: 14px; position: absolute;margin-top: -55px;  background-color: rgba(0,0,0,.5);border-bottom-right-radius: 20px;padding: 6px;">
-                        <a href="{{route('detalletour',['tour'=>$item->slug])}}">  {{$item->nombretour}} </a> <span class="font-4">   </span> </h5>
-                    </div>
-                  </div>
-                
-            </div>
-           
-            @endforeach
-          </div>
-        </div> -->
       </section>
       <!-- ! page section-->
       
-      <!-- testimonials section-->
-      <section class="small-section cws_prlx_section bg-blue-40"><img src="pic/parallax-2.jpg" alt class="cws_prlx_layer">
+      <!-- page section about-->
+      <section class="small-section cws_prlx_section bg-white-80 pb-0"><img src="/public/img/banner-tour.jpg" alt class="cws_prlx_layer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mb-md-60">
+              <!-- section title-->
+              <h2 class="title-section-top alt gray">About</h2>
+              <h2 class="title-section alt gray mb-20 font-bold"><span>Turismo Rural Comunitario</span></h2>
+              <!-- ! section title-->
+              <p class="mb-30">Vestibulum tincidunt venenatis scelerisque. Proin quis enim lacinia, vehicula massa et, mollis urna. Proin nibh mauris, blandit vitae convallis at, tincidunt vel tellus. Praesent posuere nec lectus non cursus. Sed commodo odio et ipsum sagittis tincidunt.</p>
+              <div class="cws_divider short mb-30"></div>
+              <h3 class="font-medium font-5">Andean Adventures</h3>
+            </div>
+            <div class="col-md-6 flex-item-end"><img src="/public/img/tcr.jpg" alt class="mt-minus-100"></div>
+          </div>
+        </div>
+      </section>
+      <!-- ! page section about-->
+      <section class="page-section pt-70 pb-140">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <!-- title section-->
+              <h2 class="title-section text-center mt-0 mb-0">Testimonios</h2>
+              <!-- ! title section-->
+              <div class="cws_divider with-plus short-3 center mb-20 mt-10"></div>
+              <!-- twitter full screen-->
+              <div class="full-screen">
+                <ul class="tweet_list carousel-pag main-color owl-carousel owl-theme" style="opacity: 1; display: block;">
+                  <div class="owl-wrapper-outer">
+                    <div class="owl-wrapper" style="width: 4620px; left: 0px; display: block; transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;">
+                      <div class="owl-item" style="width: 770px;">
+                        <li class=" tweet_odd">
+                          <i class="twitt-icon"></i>
+                          <p><span class="tweet_text">testimonio1<br><a href="/reviews">ver mas</a></span><br></p>
+                        </li>
+                      </div>
+                      <div class="owl-item" style="width: 770px;">
+                        <li class=" tweet_odd">
+                          <p> <span class="tweet_text"> testimonio2<a href="/reviews">ver mas</a></span><br></p>
+                        </li>
+                      </div>
+                      <div class="owl-item" style="width: 770px;">
+                        <li class="  tweet_odd">
+                          <i class="twitt-icon"><img scr="/public/img/team-1.jpg"></i>
+                          <p><span class="tweet_text">testimonio3<br>
+                          <a href="/reviews">ver mas</a></span><br></p>
+                        </li>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-controls clickable"><div class="owl-pagination">
+                  </div>
+                </ul>
+              </div>
+                            <!-- ! twitter full screen-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonials section--
+      <section class="small-section cws_prlx_section bg-blue-40"><img src="/public/img/testimonial/testimonials.jpg" alt class="cws_prlx_layer">
         <div class="container">
           <div class="row">
             <div class="col-md-8">
@@ -122,54 +160,53 @@
             </div>
           </div>
           <div class="row">
-            <!-- testimonial carousel-->
+            !-- testimonial carousel--
             <div class="owl-three-item">
-              <!-- testimonial item-->
+              <!-- testimonial item--
               <div class="testimonial-item">
-                <div class="testimonial-top"><a href="hotels-details.html">
-                    <div class="pic"><img src="pic/testimonial/top-bg/1.jpg" data-at2x="pic/testimonial/top-bg/1@2x.jpg" alt></div></a>
+                <div class="testimonial-top">
                   <div class="author"> <img src="pic/testimonial/author/1.jpg" data-at2x="pic/testimonial/author/1@2x.jpg" alt></div>
                 </div>
-                <!-- testimonial content-->
+                <!-- testimonial content--
                 <div class="testimonial-body">
                   <h5 class="title"><span>Nicole</span> Beck</h5>
                   <div class="stars stars-5"></div>
                   <p class="align-center">Suspe blandit orci quis lorem eleifend maximus. Quisque nec.</p><a href="page-about-us.html" class="testimonial-button">Read more</a>
                 </div>
               </div>
-              <!-- testimonial item-->
+              <!-- testimonial item--
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="hotels-details.html">
                     <div class="pic"><img src="pic/testimonial/top-bg/2.jpg" data-at2x="pic/testimonial/top-bg/2@2x.jpg" alt></div></a>
                   <div class="author"> <img src="pic/testimonial/author/2.jpg" data-at2x="pic/testimonial/author/2@2x.jpg" alt></div>
                 </div>
-                <!-- testimonial content-->
+                <!-- testimonial content--
                 <div class="testimonial-body">
                   <h5 class="title"><span>Peter</span> Robertson</h5>
                   <div class="stars stars-5"></div>
                   <p class="align-center">Nulla elit justo, dapibus ut lacus ac, ornare elementum neque.</p><a href="page-about-us.html" class="testimonial-button">Read more</a>
                 </div>
               </div>
-              <!-- testimonial item-->
+              <!-- testimonial item--
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="hotels-details.html">
                     <div class="pic"><img src="pic/testimonial/top-bg/3.jpg" data-at2x="pic/testimonial/top-bg/3@2x.jpg" alt></div></a>
                   <div class="author"> <img src="pic/testimonial/author/3.jpg" data-at2x="pic/testimonial/author/3@2x.jpg" alt></div>
                 </div>
-                <!-- testimonial content-->
+                <!-- testimonial content--
                 <div class="testimonial-body">
                   <h5 class="title"><span>Kathy</span> Harrison</h5>
                   <div class="stars stars-5"></div>
                   <p class="align-center">Maece facilisis sit amet mauris eget aliquam. Integer vitae.</p><a href="page-about-us.html" class="testimonial-button">Read more</a>
                 </div>
               </div>
-              <!-- testimonial item-->
+              <!-- testimonial item--
               <div class="testimonial-item">
                 <div class="testimonial-top"><a href="hotels-details.html">
                     <div class="pic"><img src="pic/testimonial/top-bg/1.jpg" data-at2x="pic/testimonial/top-bg/1@2x.jpg" alt></div></a>
                   <div class="author"> <img src="pic/testimonial/author/1.jpg" data-at2x="pic/testimonial/author/1@2x.jpg" alt></div>
                 </div>
-                <!-- testimonial content-->
+                <!-- testimonial content--
                 <div class="testimonial-body">
                   <h5 class="title"><span>Nicole</span> Beck</h5>
                   <div class="stars stars-5"></div>
@@ -182,6 +219,7 @@
       </section>
       <!-- ! testimonials section-->
       <!-- gallery section-->
+
       
   
       <!-- ! gallery section-->
@@ -251,28 +289,40 @@
           <!--  </div>-->
           <!--</section>-->
       <!-- ! latest news-->
-      <!-- call out section-->
-      <!--<section class="page-section pt-90 pb-80 bg-main pattern relative">-->
-      <!--  <div class="container">-->
-      <!--    <div class="call-out-box clearfix with-icon">-->
-      <!--      <div class="row call-out-wrap">-->
-      <!--        <div class="col-md-5">-->
-      <!--          <h6 class="title-section-top gray font-4">subscribe today</h6>-->
-      <!--          <h2 class="title-section alt-2"><span>Get</span> Latest offers</h2><i class="flaticon-suntour-email call-out-icon"></i>-->
-      <!--        </div>-->
-      <!--        <div class="col-md-7">-->
-      <!--          <form action="php/contacts-process.php" method="post" class="form contact-form mt-10">-->
-      <!--            <div class="input-container">-->
-      <!--              <input type="text" placeholder="Enter your email" value="" name="email" class="newsletter-field mb-0 form-row"><i class="flaticon-suntour-email icon-left"></i>-->
-      <!--              <button type="submit" class="subscribe-submit"><i class="flaticon-suntour-arrow icon-right"></i></button>-->
-      <!--            </div>-->
-      <!--          </form>-->
-      <!--        </div>-->
-      <!--      </div>-->
-      <!--    </div>-->
-      <!--  </div>-->
-      <!--</section>-->
-      <!-- ! call out section-->
+
+      <!--  call out section--
+      <section class="page-section pt-90 pb-80 bg-main pattern relative">
+      <div class="container">
+          <div class="call-out-box clearfix with-icon">
+           <div class="row call-out-wrap">
+             <div class="col-md-5">
+               <h6 class="title-section-top gray font-4">subscribe today</h6>
+               <h2 class="title-section alt-2"><span>Get</span> Latest offers</h2><i class="flaticon-suntour-email call-out-icon"></i>
+              </div>
+              <div class="col-md-7">
+                <form action="php/contacts-process.php" method="post" class="form contact-form mt-10">
+                  <div class="input-container">
+                   <input type="text" placeholder="Enter your email" value="" name="email" class="newsletter-field mb-0 form-row"><i class="flaticon-suntour-email icon-left"></i>
+                   <button type="submit" class="subscribe-submit"><i class="flaticon-suntour-arrow icon-right"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     !-- call out section--> 
+     <!-- call out section--
+      <section class="page-section cws_prlx_section bg-white-80 pb-60 pt-60"><img src="pic/parallax-5.jpg" alt class="cws_prlx_layer">
+        <div class="container">
+          <div class="call-out-box">
+            <div class="call-out-wrap alt">
+              <h2 class="title-section alt-2 gray">Do you have questions?</h2><a href="#" class="cws-button border-left large alt mb-20">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      !-- ! call out section-->
     </div>
 
 @endsection

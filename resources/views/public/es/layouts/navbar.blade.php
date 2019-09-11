@@ -28,10 +28,10 @@
                 <!-- End Sub-->
               </li>
               <li class="slash">/</li>
-              <li><a href="page-contact.html">NOSOTROS</a></li>
+              <li><a href="/about-us">NOSOTROS</a></li>
               <li class="slash">/</li>
 
-              <li><a href="page-contact.html">TESTIMONIOS</a></li>
+              <li><a href="/reviews">TESTIMONIOS</a></li>
                <li class="slash">/</li>
              
               <li><a href="/blog">BLOG</a></li>
@@ -43,8 +43,8 @@
               <li><a href="#" class="mn-has-sub">LANGUAJE<i class="fa fa-angle-down button_open"></i></a>
                 <!-- Sub-->
                 <ul class="mn-sub">
-                  <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'aventura'])}}">ENGLISH</a></li>
-                  <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'mistico'])}}">ESPAÑOL</a></li>
+                  <li><a href="/es">ENGLISH</a></li>
+                  <li><a href="/es">ESPAÑOL</a></li>
                 </ul>
                 <!-- End Sub-->
               </li>

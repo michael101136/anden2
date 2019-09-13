@@ -15,52 +15,109 @@
 
 
 <!-- footer-->
-    <footer style="background-color: #09695a;" class="footer footer-fixed">
+ <footer class="bg-dark type-2">
       <div class="container">
-        <div class="row pb-100 pb-md-40">
-          <!-- widget footer-->
-              <div class="col-md-6 col-sm-12 mb-sm-30">
-               <div class="logo-soc clearfix">
-               <div class="footer-logo"><a href="index.html"><img src="/public/img/logo-white.png" data-at2x="img/logo-white@2x.png" alt></a></div>
-               </div>
-                <p class="color-g2 mt-10">Vestibulum tincidunt venenatis scelerisque. Proin quis enim lacinia, vehicula massa et, mollis urna. Proin nibh mauris, blandit vitae convallis at, tincidunt vel tellus. Praesent posuere nec lectus non.</p>
-                <!-- social-->
-                <div class="social-link dark"><a href="#" class="cws-social fa fa-twitter"></a><a href="#" class="cws-social fa fa-facebook"></a><a href="#" class="cws-social fa fa-google-plus"></a><a href="#" class="cws-social fa fa-linkedin"></a></div>
-                <!-- ! social-->
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-block">
+              <img src="img/theme-1/logo.png" alt="" class="logo-footer">
+              <div class="f_text color-grey-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  magna aliqua. Ut aliquip ex ea commodo consequat.</div>
+              <div class="footer-share">
+                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="#"><span class="fa fa-twitter"></span></a>
+                <a href="#"><span class="fa fa-google-plus"></span></a>
+                <a href="#"><span class="fa fa-pinterest"></span></a>
               </div>
-          <!-- ! widget footer-->
-          <!-- widget footer-->
-         <div class="col-md-3 col-sm-6 mb-sm-30">
-            <div class="widget-footer">
-             <h4>Latest Tweets</h4>
-             <div class="twitter-footer align-left"></div>
-           </div>
-          </div>
-          <!-- end widget footer-->
-          <!-- widget footer-->
-          <div class="col-md-3 col-sm-6">
-           <div class="widget-footer">
-            <h4>Tag cloud</h4>
-            <div class="widget-tags-wrap"><a href="#" rel="tag" class="tag">Adventure</a><a href="#" rel="tag" class="tag">Romantic</a><a href="#" rel="tag" class="tag">Wildlife</a><a href="#" rel="tag" class="tag">Beach</a><a href="#" rel="tag" class="tag">Honeymoon</a><a href="#" rel="tag" class="tag">Island</a><a href="#" rel="tag" class="tag">Parks</a><a href="#" rel="tag" class="tag">Family</a><a href="#" rel="tag" class="tag">Travel</a></div>
             </div>
           </div>
-          <!-- end widget footer-->
+          <div class="col-lg-3 col-md-3 col-sm-6 col-sm-6 no-padding">
+           <div class="footer-block">
+            <h6>Travel News</h6>
+            <div class="f_news clearfix">
+              <a class="f_news-img black-hover" href="#">
+                <img class="img-responsive" src="img/home_6/news_1.jpg" alt="">
+                <div class="tour-layer delay-1"></div>
+              </a>
+              <div class="f_news-content">
+                <a class="f_news-tilte color-white link-red" href="#">amazing place</a>
+                <span class="date-f">Mar 18, 2015</span>
+                <a href="#" class="r-more">read more</a>
+              </div>
+            </div>
+            <div class="f_news clearfix">
+              <a class="f_news-img black-hover" href="#">
+                <img class="img-responsive" src="img/home_6/news_2.jpg" alt="">
+                <div class="tour-layer delay-1"></div>
+              </a>
+              <div class="f_news-content">
+                <a class="f_news-tilte color-white link-red" href="#">amazing place</a>
+                <span class="date-f">Mar 18, 2015</span>
+                <a href="#" class="r-more">read more</a>
+              </div>
+            </div>
+            <div class="f_news clearfix">
+              <a class="f_news-img black-hover" href="#">
+                <img class="img-responsive" src="img/home_6/news_1.jpg" alt="">
+                <div class="tour-layer delay-1"></div>
+              </a>
+              <div class="f_news-content">
+                <a class="f_news-tilte color-white link-red" href="#">amazing place</a>
+                <span class="date-f">Mar 18, 2015</span>
+                <a href="#" class="r-more">read more</a>
+              </div>
+            </div>              
+           </div>
+        </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+             <div class="footer-block">
+                     <h6>Tags:</h6>
+                <a href="#" class="tags-b">flights</a>
+                <a href="#" class="tags-b">traveling</a>
+                <a href="#" class="tags-b">sale</a>
+                <a href="#" class="tags-b">cruises</a>
+                <a href="#" class="tags-b">cars</a>
+                <a href="#" class="tags-b">hotels</a>
+                <a href="#" class="tags-b">tours</a>
+                <a href="#" class="tags-b">booking</a>
+                <a href="#" class="tags-b">countries</a>
+           </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                   <div class="footer-block">
+                     <h6>Contact Info</h6>
+                       <div class="contact-info">
+                        <div class="contact-line color-grey-3"><i class="fa fa-map-marker"></i><span>Aenean vulputate porttitor</span></div>
+            <div class="contact-line color-grey-3"><i class="fa fa-phone"></i><a href="tel:93123456789">+93 123 456 789</a></div>
+            <div class="contact-line color-grey-3"><i class="fa fa-envelope-o"></i><a href="mailto:">letstravel@mail.com</a></div>          
+            <div class="contact-line color-grey-3"><i class="fa fa-globe"></i><a href="#">let’s_travel@world.com</a></div>          
+            
+          </div>
+           </div> 
+        </div>
         </div>
       </div>
-      <!-- copyright-->
-      <div class="copyright"> 
+      <div class="footer-link bg-black">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
-              <p>© Copyright 2019 <span>Andean Adventures</span> &nbsp;&nbsp;|&nbsp;&nbsp; All Rights Reserved   {{$errors}}</p>
+            <div class="col-md-12">
+                <div class="copyright">
+            <span>&copy; 2015 All rights reserved. LET'STRAVEL</span>
+          </div>
+              <ul>
+            <li><a class="link-aqua" href="#">Privacy Policy </a></li>
+            <li><a class="link-aqua" href="#">About Us</a></li>
+            <li><a class="link-aqua" href="#">Support </a></li>
+            <li><a class="link-aqua" href="#">FAQ</a></li>
+            <li><a class="link-aqua" href="#">Blog</a></li>
+            <li><a class="link-aqua" href="#"> Forum</a></li>
+          </ul>
             </div>
-            <!--<div class="col-sm-6 text-right"><a href="index.html" class="footer-nav">Home</a><a href="page-about-us.html" class="footer-nav">Pages</a><a href="hotels-search.html" class="footer-nav">Hotels</a><a href="blog-grid.html" class="footer-nav">Blog</a><a href="shop-grid.html" class="footer-nav">Shop</a><a href="page-contact.html" class="footer-nav">Contacts</a></div>-->
           </div>
         </div>
       </div>
-      <!-- end copyright-->
-      <!-- scroll top-->
-    </footer>
+    </footer> 
+
+
     <div id="scroll-top"><i class="fa fa-angle-up"></i></div>
     <!-- ! footer-->
     <!-- login popup-->
@@ -180,52 +237,14 @@
 
 
 
-    <script src="https://www.youtube.com/player_api"></script>
-    {!!Html::script('public/js/jquery.min.js')!!}
-    {!!Html::script('public/js/jquery-ui.min.js')!!}
-    {!!Html::script('public/js/bootstrap.js')!!}
-    {!!Html::script('public/js/owl.carousel.js')!!}
-    {!!Html::script('public/js/jquery.sticky.js')!!}
-    {!!Html::script('public/js/TweenMax.min.js')!!}
-    {!!Html::script('public/js/cws_parallax.js')!!}
-    {!!Html::script('public/js/jquery.fancybox.pack.js')!!}
-    {!!Html::script('public/js/jquery.fancybox-media.js')!!}
-    {!!Html::script('public/js/isotope.pkgd.min.js')!!}
-    {!!Html::script('public/js/imagesloaded.pkgd.min.js')!!}
-    {!!Html::script('public/js/masonry.pkgd.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/jquery.themepunch.tools.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/jquery.themepunch.revolution.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.slideanims.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.navigation.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.parallax.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.video.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.actions.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.kenburn.min.js')!!}
-    {!!Html::script('public/rs-plugin/js/extensions/revolution.extension.migration.min.js')!!}
-    {!!Html::script('public/js/jquery.validate.min.js')!!}
-    {!!Html::script('public/js/jquery.form.min.js')!!}
-    {!!Html::script('public/js/script.js')!!}
-    {!!Html::script('public/js/bg-video/cws_self_vimeo_bg.js')!!}
-    {!!Html::script('public/js/bg-video/jquery.vimeo.api.min.js')!!}
-    {!!Html::script('public/js/bg-video/cws_YT_bg.js')!!}
-    {!!Html::script('public/js/jquery.tweet.js')!!}
-    {!!Html::script('public/js/jquery.scrollTo.min.js')!!}
-    {!!Html::script('public/js/jquery.flexslider.js')!!}
-    {!!Html::script('public/tuner/js/colorpicker.js')!!}
-    {!!Html::script('public/tuner/js/scripts.js')!!}
-    {!!Html::script('public/js/retina.min.js')!!}
-        
-
-
-        @if($errors->any())
-        <script>
-            $(document).ready(function(){
-              
-                  $(".login-popup").addClass("open");
-            });
-        </script>
-        @endif
+{!!Html::script('plantilla/js/jquery-2.1.4.min.js')!!}
+{!!Html::script('plantilla/js/bootstrap.min.js')!!}
+{!!Html::script('plantilla/js/jquery-ui.min.js')!!}
+{!!Html::script('plantilla/js/idangerous.swiper.min.js')!!}
+{!!Html::script('plantilla/js/jquery.mousewheel.min.js')!!}
+{!!Html::script('plantilla/js/jquery.viewportchecker.min.js')!!}
+{!!Html::script('plantilla/js/isotope.pkgd.min.js')!!}
+{!!Html::script('plantilla/js/all.js')!!}
 
   </body>
 </html>

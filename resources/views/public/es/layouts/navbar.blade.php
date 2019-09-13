@@ -1,60 +1,45 @@
  
  <!-- header page-->
-    <header>
-      
-      <!-- Navigation panel-->
-      <nav class="main-nav transparent stick-fixed">
-        <div class="full-wrapper relative clearfix container">
-          <!-- Logo ( * your text or image into link tag *)-->
-          <!-- <div class="nav-logo-wrap local-scroll"><a href="index.html" class="logo"><img src="/public/img/logo.png" data-at2x="img/logo@2x.png" style="height: 20px;"></a></div> -->
-          <!-- Main Menu-->
-          <div class="inner-nav desktop-nav">
-            <ul class="clearlist">
-              <!-- Item With Sub-->
-              <li>
-                <a href="/" class="mn-has-sub active">INICIO</a>
-              </li>
-              <!-- End Item With Sub-->
-              <li class="slash">/</li>
-              <!-- Item With Sub-->
-              <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'aventura'])}}" class="mn-has-sub">PAQUETES<i class="fa fa-angle-down button_open"></i></a>
-                <!-- Sub-->
-                <ul class="mn-sub">
-                  <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'aventura'])}}">AVENTURA</a></li>
-                  <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'mistico'])}}">MÍSTICO</a></li>
-                  <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'tradicional'])}}">TRADICIONAL</a></li>
-                  <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'vivencial'])}}">VIVENCIAL</a></li>
-                </ul>
-                <!-- End Sub-->
-              </li>
-              <li class="slash">/</li>
-              <li><a href="/about-us">NOSOTROS</a></li>
-              <li class="slash">/</li>
-
-              <li><a href="/reviews">TESTIMONIOS</a></li>
-               <li class="slash">/</li>
-             
-              <li><a href="/blog">BLOG</a></li>
-               <li class="slash">/</li>
-              <!-- End Item With Sub-->
-              <li><a href="/contacto">CONTACTO </a></li>
-              <li class="slash">/</li>
-              <!-- End Item With Sub-->
-              <li><a href="#" class="mn-has-sub">LANGUAJE<i class="fa fa-angle-down button_open"></i></a>
-                <!-- Sub-->
-                <ul class="mn-sub">
-                  <li><a href="/es">ENGLISH</a></li>
-                  <li><a href="/es">ESPAÑOL</a></li>
-                </ul>
-                <!-- End Sub-->
-              </li>
-              
-              <!-- End Search-->
-            </ul>
-          </div>
-          <!-- End Main Menu-->
+  <header class="color-1 hovered menu-3">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="nav"> 
+            <a href="index.html" class="logo">
+              <img src="img/theme-1/logo_dark.png" alt="lets travel">
+            </a>
+            <div class="nav-menu-icon">
+          <a href="#"><i></i></a>
         </div>
-      </nav>
-      <!-- End Navigation panel-->
-    </header>
+          <nav class="menu">
+          <ul>
+          <li class="type-1 active">
+            <a href="#">home<span class="fa fa-angle-down"></span></a>
+            <ul class="dropmenu">
+              <li><a href="index.html">INICIO</a></li>
+            </ul>
+          </li>
+          <li class="type-1"><a href="#">PAQUETES<span class="fa fa-angle-down"></span></a>
+            <ul class="dropmenu">
+              <li><a href="index_2.html">TRADICIONAL</a></li>
+                            <li><a href="hotel_list.html">VIVENCIAL</a></li>
+            </ul>
+          </li>
+          <li class="type-1"><a href="#">NOSOTROS<span class="fa fa-angle-down"></span></a>
+          </li>
+          <li class="type-1"><a href="#">CONTACTO<span class="fa fa-angle-down"></span></a>
+          </li>
+          <li class="type-1"><a href="#">LENGUAJE<span class="fa fa-angle-down"></span></a>
+            <ul class="dropmenu">
+              <li><a href="cruise_list.html">ESPAÑOL</a></li>
+                            <li><a href="cruise_grid.html">ENGLISH</a></li>
+            </ul>
+          </li>
+          </ul>
+       </nav>
+       </div>
+         </div>
+      </div>
+   </div>
+  </header>
     <!-- ! header page-->

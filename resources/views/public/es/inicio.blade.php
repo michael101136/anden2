@@ -62,7 +62,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="second-title">
-              <h2>The Best Sea Tours</h2>
+              <h2>The Best Tours</h2>
                 <p class="color-grey">Curabitur nunc erat, consequat in erat ut, congue bibendum nulla. Suspendisse id tor.</p>
             </div>
           </div>
@@ -511,7 +511,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="second-title">
-              <h2>Special Offers</h2>
+              <h2>Latest Blogs</h2>
                 <p class="color-grey">Curabitur nunc erat, consequat in erat ut, congue bibendum nulla.</p>
             </div>
           </div>
@@ -725,108 +725,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-6 col-sm-12">
-            <div class="popular-desc text-right">
-                <div class="clip">
-                <div class="bg bg-bg-chrome act bg-contain" style="background-image:url(/plantilla/img/home_1/map_2.png)">
-              </div>
-              </div>
-              <div class="vertical-align">
-                <h3>france, europe</h3>
-                  <p class="color-grey">Curabitur nunc erat, consequat in erat ut, congue bibendum nulla. Suspendisse id pharetra lacus, et hendrerit mi Praesent at vestibulum tortor. Praesent condimentum efficitur massa, nec congue sem dapibus sed. </p>
-                  <h4>best cities</h4>
-                    <div class="row">
-                      <div class="col-md-4 col-sm-4 col-xs-4">
-                        <ul>
-                          <li><a href="#">Rome</a></li>
-                          <li><a href="#">Venice</a></li>
-                          <li><a href="#">Pisa</a></li>
-                          <li><a href="#">Naples</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 col-sm-4 col-xs-4">
-                        <ul>
-                          <li><a href="#">Bologna</a></li>
-                          <li><a href="#">Florence</a></li>
-                          <li><a href="#">Genoa</a></li>
-                          <li><a href="#">Turin</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 col-sm-4 col-xs-4">
-                        <ul>
-                          <li><a href="#">Milan</a></li>
-                          <li><a href="#">Capri</a></li>
-                          <li><a href="#">Matera</a></li>
-                          <li><a href="#">Pompeii</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                <a href="#" class="c-button bg-aqua hv-transparent b-50 custom-icon">
-                  <img class="img-hide" src="/plantilla/img/flag_icon.png" alt="">
-                  <img class="img-hov" src="/plantilla/img/flag_icon_aqua.png" alt="">
-                  <span>view all places</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-6 col-sm-12">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="radius-mask popular-img">
-                 <div class="clip">
-                <div class="bg bg-bg-chrome act" style="background-image:url(/plantilla/img/home_1/popular_travel_img_5.jpg)">
-                </div>
-               </div>
-               <div class="tour-layer delay-1"></div>
-               <div class="vertical-bottom">
-                        <h4><a href="#">Donec id maximus</a></h4>
-                          <h5><b class="color-aqua">from $215</b> per person</h5>
-                   </div>
-              </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="radius-mask popular-img">
-                 <div class="clip">
-                <div class="bg bg-bg-chrome act" style="background-image:url(/plantilla/img/home_1/popular_travel_img_6.jpg)">
-                </div>
-               </div>
-               <div class="tour-layer delay-1"></div>
-               <div class="vertical-bottom">
-                        <h4><a href="#">Pellentesque tempus</a></h4>
-                          <h5><b class="color-aqua">from $175</b> per person</h5>
-                   </div>
-              </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="radius-mask popular-img">
-                 <div class="clip">
-                <div class="bg bg-bg-chrome act" style="background-image:url(/plantilla/img/home_1/popular_travel_img_7.jpg)">
-                </div>
-               </div>
-               <div class="tour-layer delay-1"></div>
-               <div class="vertical-bottom">
-                        <h4><a href="#">Aenean iaculis enim</a></h4>
-                          <h5><b class="color-aqua">from $150</b> per person</h5>
-                   </div>
-              </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="radius-mask popular-img">
-                 <div class="clip">
-                <div class="bg bg-bg-chrome act" style="background-image:url(/plantilla/img/home_1/popular_travel_img_8.jpg)">
-                </div>
-               </div>
-               <div class="tour-layer delay-1"></div>
-               <div class="vertical-bottom">
-                        <h4><a href="#">Maecenas sit amet</a></h4>
-                          <h5><b class="color-aqua">from $290</b> per person</h5>
-                   </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
     </div>
   </div>   
 

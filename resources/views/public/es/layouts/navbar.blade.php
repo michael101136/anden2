@@ -19,10 +19,10 @@
               <li><a href="index.html">INICIO</a></li>
             </ul>
           </li>
-          <li class="type-1"><a href="#">PAQUETES<span class="fa fa-angle-down"></span></a>
+          <li class="type-1"><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'aventura'])}}">PAQUETES<span class="fa fa-angle-down"></span></a>
             <ul class="dropmenu">
-              <li><a href="index_2.html">TRADICIONAL</a></li>
-                            <li><a href="hotel_list.html">VIVENCIAL</a></li>
+              <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'tradicional'])}}">TRADICIONAL</a></li>
+              <li><a href="{{route('paquete',['idioma'=> 'es','categoria'=>'aventura'])}}">AVENTURA</a></li>
             </ul>
           </li>
           <li class="type-1"><a href="#">NOSOTROS<span class="fa fa-angle-down"></span></a>

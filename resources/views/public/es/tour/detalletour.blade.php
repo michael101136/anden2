@@ -30,9 +30,9 @@
           <h2 class="detail-title color-dark-2">10 Days of Vacation in paris Resorts</h2>
           
           </div>
-          <div class="col-xs-12 col-sm-4">
+          <!-- <div class="col-xs-12 col-sm-4">
             <div class="detail-price color-dark-2">price from  <span class="color-blue"> $500</span> /person</div>
-          </div>
+          </div> -->
           </div>
         </div>
         <div class="row padd-90">
@@ -112,34 +112,56 @@
               <div class="detail-block bg-blue-2">
                 <h4 class="color-white">RESERVA</h4>
                 <div class="details-desc">
-              <p class="color-blue-4">Category:  <span class="color-white">sea tour</span></p>
-              <p class="color-blue-4">price: <span class="color-white">$500 / person</span></p>
-              <p class="color-blue-4">location: <span class="color-white">paris, france</span></p>
-              <p class="color-blue-4">date: <span class="color-white">july 19th to july 29th</span></p>
-              <p class="color-blue-4">rate: <span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span></p>
-              <p class="color-blue-4">number of people: <span class="color-white">2 adult</span></p>
-              <p class="color-blue-4">hotel: <span class="color-white">bristol paris hotel</span></p>
-              <p class="color-blue-4">kind of transport: <span class="color-white">tourist bus</span></p>
-              <p class="color-blue-4">DISCOUNT: <span class="color-white">20% off</span></p>
-            </div>
-            <div class="details-btn">
-              <a href="#" class="c-button b-40 bg-tr-1 hv-blue"><span>view on map</span></a>
-              <a href="#" class="c-button b-40 bg-white hv-transparent"><span>book now</span></a>
-            </div>
+                  <form class="contact-form" action="#">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="input-style-1 type-2 b-40 color-3">
+                            <input type="text" required="" placeholder="Enter your name">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="input-style-1 type-2 color-3">
+                            <input type="text" required="" placeholder="Enter your email">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="input-style-1 type-2 color-3">
+                            <input type="text" required="" placeholder="Enter your name">
+                        </div>
+                      </div>  
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="drop-wrap drop-wrap-s-3 color-2">
+                            <div class="drop">
+                            <b>Department</b>
+                            <a href="#" class="drop-list"><i class="fa fa-angle-down"></i></a>
+                            <span>
+                                <a href="#">01 kids</a>
+                              <a href="#">02 kids</a>
+                              <a href="#">03 kids</a>
+                              <a href="#">04 kids</a>
+                              <a href="#">05 kids</a>
+                            </span>
+                            </div>
+                        </div>            
+                      </div>
+                      <div class="col-xs-12">
+                        <textarea class="area-style-1 color-1" required="" placeholder="Enter your comment"></textarea>
+                        <div class="text-center">
+                          <button type="submit" class="c-button b-40 bg-white hv-transparent"><span>book now</span></button>
+                        </div>
+                      </div>
+                    </div>          
+                  </form>
+                </div>
               </div>
 
-          <div class="map-block">
-            <div id="map-canvas" class="style-3" data-lat="33.716813" data-lng="-117.191016" data-zoom="10" data-style="2"></div>
-              <div class="addresses-block">
-                  <a data-lat="33.716813" data-lng="-117.191016" data-string="Santa Monica Hotel"></a>
-              </div>
-          </div> 
+          
 
-          <div class="popular-tours bg-grey-2">
+          <!--<div class="popular-tours bg-grey-2">
             <h4 class="color-dark-2">popular tours</h4>
             <div class="hotel-small style-2 clearfix">
               <a class="hotel-img black-hover" href="#">
-                <img class="img-responsive radius-0" src="img/detail/tour_small_1.jpg" alt="">
+                <img class="img-responsive radius-0" src="/plantilla/img/detail/tour_small_1.jpg" alt="">
                 <div class="tour-layer delay-1"></div>                    
               </a>
               <div class="hotel-desc">
@@ -150,7 +172,7 @@
             </div>
             <div class="hotel-small style-2 clearfix">
               <a class="hotel-img black-hover" href="#">
-                <img class="img-responsive radius-0" src="img/detail/tour_small_2.jpg" alt="">
+                <img class="img-responsive radius-0" src="/plantilla/img/detail/tour_small_2.jpg" alt="">
                 <div class="tour-layer delay-1"></div>                    
               </a>
               <div class="hotel-desc">
@@ -161,7 +183,7 @@
             </div>
             <div class="hotel-small style-2 clearfix">
               <a class="hotel-img black-hover" href="#">
-                <img class="img-responsive radius-0" src="img/detail/tour_small_3.jpg" alt="">
+                <img class="img-responsive radius-0" src="/plantilla/img/detail/tour_small_3.jpg" alt="">
                 <div class="tour-layer delay-1"></div>                    
               </a>
               <div class="hotel-desc">
@@ -170,9 +192,9 @@
                 <div class="hotel-loc tt">115 tours in 35 cities</div>
               </div>
             </div>                      
-          </div>
+          </div> -->
 
-          <div class="sidebar-text-label bg-blue-2 color-white">CONTACTO</div>
+          <!--<div class="sidebar-text-label bg-blue-2 color-white">CONTACTO</div> -->
 
           <div class="help-contact bg-grey-2">
             <h4 class="color-dark-2">Need Help?</h4>

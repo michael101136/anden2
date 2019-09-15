@@ -1,19 +1,346 @@
 @extends('public.es.layouts.master')
 
 @section('content')
- <!-- breadcrumbs start-->
-      <section style="background-image:url('/public/img/baner-tour.jpg');  padding-top: 120px" class="breadcrumbs style-2 gray-90">
-        <div class="container">
-          <div class="text-left breadcrumbs-item">
-            <h2> {{$detalleTour->nombre}}</h2>
-            
+
+<!-- INNER-BANNER -->
+<div class="inner-banner style-6">
+  <img class="center-image" src="/public/img/baner-tour.jpg" alt="">
+  <div class="vertical-align">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <ul class="banner-breadcrumb color-white clearfix">
+              <li><a class="link-blue-2" href="#">home</a> /</li>
+              <li><a class="link-blue-2" href="#">tours</a> /</li>
+              <li><span>detail</span></li>
+            </ul>
+            <h2 class="color-white">{{$detalleTour->nombre}}</h2>
           </div>
-          <div class="breadright"><a href="#" class="cws-button small alt">Get price</a>
-            <p>Best Price Guarantee</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- DETAIL WRAPPER -->
+<div class="detail-wrapper">
+  <div class="container">
+    <div class="detail-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <div class="detail-category color-grey-3">Champs-Elysées, Paris France</div>
+          <h2 class="detail-title color-dark-2">10 Days of Vacation in paris Resorts</h2>
+          
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="detail-price color-dark-2">price from  <span class="color-blue"> $500</span> /person</div>
+          </div>
           </div>
         </div>
-      </section>
-      <!-- ! breadcrumbs end-->
+        <div class="row padd-90">
+          <div class="col-xs-12 col-lg-8">
+            <div class="detail-content">
+              <div class="detail-content-block">
+                <h3>DESCRIPCION</h3>
+                <p>{{$detalleTour->descripcion}}</p>
+                  
+                <h5>interesting for you</h5>
+
+                <p>Pellentesque ac turpis egestas, varius justo et, condimentum augue. Praesent aliquam, nisl feugiat vehicula condimentum, justo tellus scelerisque metus. Pellentesque varius justo et, condimentum augue.</p>
+
+              </div>
+              <div class="detail-top slider-wth-thumbs style-1 arrows">
+                <div class="swiper-container thumbnails-preview" data-autoplay="0" data-loop="1" data-speed="500" data-center="0" data-slides-per-view="1">
+                          <div class="swiper-wrapper">
+                             @foreach($multimedia as $item)
+                             <div class="swiper-slide" data-val="{{$item->img}}">
+                                 <img class="img-responsive img-full" src="{{$item->img}}" alt="">
+                              </div>
+                             @endforeach
+                            </div>
+                          <div class="pagination pagination-hidden"></div>
+                    <div class="arrow-wrapp arr-s-3">
+                    <div class="swiper-arrow-left sw-arrow"><span class="fa fa-angle-left"></span></div>
+                    <div class="swiper-arrow-right sw-arrow"><span class="fa fa-angle-right"></span></div>
+                  </div>
+                      </div>
+                      <div class="swiper-container thumbnails" data-autoplay="0" 
+                      data-loop="0" data-speed="500" data-center="0" 
+                      data-slides-per-view="responsive" data-xs-slides="3" 
+                      data-sm-slides="5" data-md-slides="5" data-lg-slides="5" 
+                      data-add-slides="5">
+                      <div class="swiper-wrapper">
+                        @foreach($multimedia as $item)
+                    <div class="swiper-slide" data-val="{{$item->img}}">
+                      <img class="img-responsive img-full" src="{{$item->img}}" alt="">
+                    </div>
+                    @endforeach
+                  </div>
+                  <div class="pagination hidden"></div>
+                </div>
+              </div>
+
+          
+          <div class="detail-content-block">
+            <h3>ITINERARIO</h3>
+                      <div class="accordion style-1">
+                          <div class="acc-panel">
+                              <div class="acc-title"><span class="acc-icon"></span>How can I manage Instant Book settings?</div>
+                              <div class="acc-body">
+                  <h5>metus Aenean eget massa</h5>
+                  <p>Mauris posuere diam at enim malesuada, ac malesuada erat auctor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim.</p>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <ul>
+                        <li>Shopping history</li>
+                        <li>Hot offers according your settings</li>
+                        <li>Multi-product search</li>
+                        <li>Opportunity to share with friends</li>
+                        <li>User-friendly interface</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <ul>
+                        <li>Shopping history</li>
+                        <li>Hot offers according your settings</li>
+                        <li>Multi-product search</li>
+                        <li>Opportunity to share with friends</li>
+                        <li>User-friendly interface</li>
+                      </ul>                 
+                    </div>
+                  </div>
+                              </div>
+                          </div>
+                          <div class="acc-panel">
+                              <div class="acc-title"><span class="acc-icon"></span>How do I list multiple rooms?</div>
+                              <div class="acc-body">
+                  <h5>metus Aenean eget massa</h5>
+                  <p>Mauris posuere diam at enim malesuada, ac malesuada erat auctor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim.</p>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <ul>
+                        <li>Shopping history</li>
+                        <li>Hot offers according your settings</li>
+                        <li>Multi-product search</li>
+                        <li>Opportunity to share with friends</li>
+                        <li>User-friendly interface</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <ul>
+                        <li>Shopping history</li>
+                        <li>Hot offers according your settings</li>
+                        <li>Multi-product search</li>
+                        <li>Opportunity to share with friends</li>
+                        <li>User-friendly interface</li>
+                      </ul>                 
+                    </div>
+                  </div>
+                              </div>
+                          </div>
+                          <div class="acc-panel">
+                              <div class="acc-title"><span class="acc-icon"></span>How do I use my calendar?</div>
+                              <div class="acc-body">
+                  <h5>metus Aenean eget massa</h5>
+                  <p>Mauris posuere diam at enim malesuada, ac malesuada erat auctor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim.</p>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <ul>
+                        <li>Shopping history</li>
+                        <li>Hot offers according your settings</li>
+                        <li>Multi-product search</li>
+                        <li>Opportunity to share with friends</li>
+                        <li>User-friendly interface</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <ul>
+                        <li>Shopping history</li>
+                        <li>Hot offers according your settings</li>
+                        <li>Multi-product search</li>
+                        <li>Opportunity to share with friends</li>
+                        <li>User-friendly interface</li>
+                      </ul>                 
+                    </div>
+                  </div>
+                              </div>
+                          </div>                                                                                                                        
+                      </div>                      
+          </div>                    
+        </div>            
+          </div>
+          <div class="col-xs-12 col-lg-4">
+            <div class="right-sidebar">
+              <div class="detail-block bg-blue-2">
+                <h4 class="color-white">details</h4>
+                <div class="details-desc">
+              <p class="color-blue-4">Category:  <span class="color-white">sea tour</span></p>
+              <p class="color-blue-4">price: <span class="color-white">$500 / person</span></p>
+              <p class="color-blue-4">location: <span class="color-white">paris, france</span></p>
+              <p class="color-blue-4">date: <span class="color-white">july 19th to july 29th</span></p>
+              <p class="color-blue-4">rate: <span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span><span class="fa fa-star color-yellow"></span></p>
+              <p class="color-blue-4">number of people: <span class="color-white">2 adult</span></p>
+              <p class="color-blue-4">hotel: <span class="color-white">bristol paris hotel</span></p>
+              <p class="color-blue-4">kind of transport: <span class="color-white">tourist bus</span></p>
+              <p class="color-blue-4">DISCOUNT: <span class="color-white">20% off</span></p>
+            </div>
+            <div class="details-btn">
+              <a href="#" class="c-button b-40 bg-tr-1 hv-blue"><span>view on map</span></a>
+              <a href="#" class="c-button b-40 bg-white hv-transparent"><span>book now</span></a>
+            </div>
+              </div>
+
+          <div class="map-block">
+            <div id="map-canvas" class="style-3" data-lat="33.716813" data-lng="-117.191016" data-zoom="10" data-style="2"></div>
+              <div class="addresses-block">
+                  <a data-lat="33.716813" data-lng="-117.191016" data-string="Santa Monica Hotel"></a>
+              </div>
+          </div> 
+
+          <div class="popular-tours bg-grey-2">
+            <h4 class="color-dark-2">popular tours</h4>
+            <div class="hotel-small style-2 clearfix">
+              <a class="hotel-img black-hover" href="#">
+                <img class="img-responsive radius-0" src="img/detail/tour_small_1.jpg" alt="">
+                <div class="tour-layer delay-1"></div>                    
+              </a>
+              <div class="hotel-desc">
+                  <h5><span class="color-dark-2">from <strong>$273</strong> / per</span></h5>
+                  <h4>italy, rome</h4>
+                <div class="hotel-loc tt">115 tours in 35 cities</div>
+              </div>
+            </div>
+            <div class="hotel-small style-2 clearfix">
+              <a class="hotel-img black-hover" href="#">
+                <img class="img-responsive radius-0" src="img/detail/tour_small_2.jpg" alt="">
+                <div class="tour-layer delay-1"></div>                    
+              </a>
+              <div class="hotel-desc">
+                  <h5><span class="color-dark-2">from <strong>$273</strong> / per</span></h5>
+                  <h4>australia, sydney</h4>
+                <div class="hotel-loc tt">115 tours in 35 cities</div>
+              </div>
+            </div>
+            <div class="hotel-small style-2 clearfix">
+              <a class="hotel-img black-hover" href="#">
+                <img class="img-responsive radius-0" src="img/detail/tour_small_3.jpg" alt="">
+                <div class="tour-layer delay-1"></div>                    
+              </a>
+              <div class="hotel-desc">
+                  <h5><span class="color-dark-2">from <strong>$273</strong> / per</span></h5>
+                  <h4>UAE, dubai</h4>
+                <div class="hotel-loc tt">115 tours in 35 cities</div>
+              </div>
+            </div>                      
+          </div>
+
+          <div class="sidebar-text-label bg-blue-2 color-white">useful information</div>
+
+          <div class="help-contact bg-grey-2">
+            <h4 class="color-dark-2">Need Help?</h4>
+            <p class="color-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="help-phone color-dark-2 link-blue" href="tel:0200059600"><img src="img/detail/phone24.png" alt="">020 00 59 600</a>
+            <a class="help-mail color-dark-2 link-blue" href="mailto:let’s_travel@world.com"><img src="img/detail/letter.png" alt="">let’s_travel@world.com</a>
+          </div>                                  
+            </div>            
+          </div>
+        </div>
+        <div class="additional-block padd-90">
+          <h4 class="additional-title">may interest you</h4>
+          <div class="may-interested">
+            <div class="row">
+              <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
+            <div class="hotel-item style-11 bg-white">
+                    <div class="radius-top">
+                      <img src="img/tour_list/tour_grid_1.jpg" alt="">               
+                    </div>
+                    <div class="title bg-grey-2">
+                      <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
+                        <h4><b>tours in greece</b></h4>
+                             <div class="rate-wrap">
+                              <div class="rate">
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    </div>
+                      <i>485 rewies</i> 
+                            </div> 
+                      <div class="hotel-person color-dark-2">from <span>$273</span> person</div>
+                    </div>
+              </div>            
+              </div>
+              <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
+            <div class="hotel-item style-11 bg-white">
+                    <div class="radius-top">
+                      <img src="img/tour_list/tour_grid_2.jpg" alt="">               
+                    </div>
+                    <div class="title bg-grey-2">
+                      <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
+                        <h4><b>TOURS IN MONACO</b></h4>
+                             <div class="rate-wrap">
+                              <div class="rate">
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    </div>
+                      <i>485 rewies</i> 
+                            </div> 
+                      <div class="hotel-person color-dark-2">from <span>$703</span> person</div>
+                    </div>
+              </div>            
+              </div>
+              <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
+            <div class="hotel-item style-11 bg-white">
+                    <div class="radius-top">
+                      <img src="img/tour_list/tour_grid_3.jpg" alt="">               
+                    </div>
+                    <div class="title bg-grey-2">
+                      <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
+                        <h4><b>TOURS IN ITALY</b></h4>
+                             <div class="rate-wrap">
+                              <div class="rate">
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    </div>
+                      <i>485 rewies</i> 
+                            </div> 
+                      <div class="hotel-person color-dark-2">from <span>$300</span> person</div>
+                    </div>
+              </div>            
+              </div>
+              <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
+            <div class="hotel-item style-11 bg-white">
+                    <div class="radius-top">
+                      <img src="img/detail/interested.jpg" alt="">               
+                    </div>
+                    <div class="title bg-grey-2">
+                      <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
+                        <h4><b>TOURS IN ITALY</b></h4>
+                             <div class="rate-wrap">
+                              <div class="rate">
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    </div>
+                      <i>485 rewies</i> 
+                            </div> 
+                      <div class="hotel-person color-dark-2">from <span>$300</span> person</div>
+                    </div>
+              </div>            
+              </div>                                
+            </div>
+        </div>
+        </div>
+  </div>
+</div>
+
 <div class="content-body">
 
       <section class="page-section pt-0 pb-50">
@@ -250,263 +577,10 @@
                   </div>
                 </div>
                      </div>
-              <!--<div class="bg-gray-3 p-30-40">-->
-              <!--  <ul class="style-1 mb-0">-->
-              <!--    <li>Parking</li>-->
-              <!--    <li>Concierge service</li>-->
-              <!--    <li>Gift shop</li>-->
-              <!--    <li>Meeting/Banquet facilities</li>-->
-              <!--    <li>Wheelchair accessible</li>-->
-              <!--    <li>Restaurant</li>-->
-              <!--    <li>Express check out</li>-->
-              <!--    <li>Air-conditioned</li>-->
-              <!--    <li>Babysitting/child services (surcharge)</li>-->
-              <!--  </ul><a href="#"><ins class="alt-5">More amenties</ins></a>-->
-              <!--</div>-->
             </div>
           </div>
         </div>
         <!-- section prices-->
-        
-        <!-- section location-->
-            <!--<div id="location" class="container mb-50">-->
-            <!--  <div class="row">-->
-            <!--    <div class="col-md-12">-->
-            <!--      <h4 class="trans-uppercase mb-10">Location</h4>-->
-            <!--      <div class="cws_divider mb-30"></div>-->
-                  <!-- google map-->
-            <!--      <div class="map-wrapper">-->
-            <!--        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25295.930156304785!2d16.371063311644324!3d48.208404844730474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07986fcad78b%3A0x73f5a4d267cc4174!2zTmFnbGVyZ2Fzc2UgMTAsIDEwMTAgV2llbiwg0JDQstGB0YLRgNC40Y8!5e0!3m2!1sru!2sua!4v1453294615596" allowfullscreen=""></iframe>-->
-            <!--      </div>-->
-            <!--      <ul class="icon inline mt-20">-->
-            <!--        <li> <a href="#">9300 Meadow Lane, Kalamazoo, MI 49009<i class="flaticon-suntour-map"></i></a></li>-->
-            <!--        <li> <a href="#">00 1 877-859-5095<i class="flaticon-suntour-phone"></i></a></li>-->
-            <!--      </ul>-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--</div>-->
-        <!-- section amenties-->
-            <!--<div id="amenties" class="container mb-50">-->
-            <!--  <div class="row">-->
-            <!--    <div class="col-md-12">-->
-            <!--      <h4 class="trans-uppercase mb-10">Amenties</h4>-->
-            <!--      <div class="cws_divider mb-10"></div>-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--  <div class="row mt-0 masonry">-->
-            <!--    <div class="col-md-3 col-sm-6">-->
-            <!--      <h6 class="trans-uppercase">General</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>Room Service</li>-->
-            <!--        <li>Newspapers</li>-->
-            <!--        <li>Non-smoking Rooms</li>-->
-            <!--        <li>Family Rooms</li>-->
-            <!--        <li>Elevator</li>-->
-            <!--        <li>Safe</li>-->
-            <!--        <li>Heating</li>-->
-            <!--        <li>All Spaces Non-Smoking</li>-->
-            <!--        <li>Air Conditioning</li>-->
-            <!--        <li>Carpeted</li>-->
-            <!--      </ul>-->
-            <!--      <h6 class="trans-uppercase mt-20">Business Facilities</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>RooFax/Photocopying</li>-->
-            <!--      </ul>-->
-            <!--    </div>-->
-            <!--    <div class="col-md-3 col-sm-6">-->
-            <!--      <h6 class="trans-uppercase">Media & Technology</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>Telephone</li>-->
-            <!--        <li>Radio</li>-->
-            <!--        <li>Cable channels</li>-->
-            <!--        <li>Flat-screen TV</li>-->
-            <!--      </ul>-->
-            <!--      <h6 class="trans-uppercase mt-20"> Bathroom</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>Hairdryer</li>-->
-            <!--        <li>Toilet</li>-->
-            <!--        <li>Bathroom</li>-->
-            <!--        <li>Slippers</li>-->
-            <!--      </ul>-->
-            <!--    </div>-->
-            <!--    <div class="col-md-3 col-sm-6">-->
-            <!--      <h6 class="trans-uppercase">Food & Drink</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>Bar</li>-->
-            <!--        <li>Breakfast in the Room</li>-->
-            <!--        <li>Restaurant with Dining Menu</li>-->
-            <!--        <li>FSpecial Diet Meals (upon request)</li>-->
-            <!--        <li>Minibar</li>-->
-            <!--      </ul>-->
-            <!--      <h6 class="trans-uppercase mt-20"> Activites</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>Hiking</li>-->
-            <!--        <li>Cycling</li>-->
-            <!--      </ul>-->
-            <!--    </div>-->
-            <!--    <div class="col-md-3 col-sm-6">-->
-            <!--      <h6 class="trans-uppercase">Front Desk Services</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>24-Hour Front Desk</li>-->
-            <!--        <li>Currency Exchange</li>-->
-            <!--        <li>Tour Desk</li>-->
-            <!--        <li>Ticket Service</li>-->
-            <!--        <li>Baggage Storage</li>-->
-            <!--        <li>Concierge Service</li>-->
-            <!--      </ul>-->
-            <!--      <h6 class="trans-uppercase mt-20"> Cleaning Services</h6>-->
-            <!--      <ul class="style-1">-->
-            <!--        <li>Laundry</li>-->
-            <!--        <li>Dry Cleaning</li>-->
-            <!--        <li>Ironing Service</li>-->
-            <!--        <li>Shoeshine</li>-->
-            <!--        <li>Daily Housekeeping</li>-->
-            <!--      </ul>-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--</div>-->
-        <!-- section reviews-->
-            <!--<div id="reviews" class="container mb-60">-->
-            <!--  <div class="row">-->
-            <!--    <div class="col-md-12">-->
-            <!--      <h4 class="trans-uppercase mb-10">Reviews travellers</h4>-->
-            <!--      <div class="cws_divider mb-30"></div>-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--  <div class="reviews-wrap">-->
-            <!--    <div class="reviews-top pattern relative">-->
-            <!--      <div class="reviews-total">-->
-            <!--        <h5>Excellent</h5>-->
-            <!--        <div class="reviews-sub-mark">4.2</div>-->
-            <!--        <div class="stars-perc"><span style="width:85%"></span></div><span>Based on 67 reviews</span>-->
-            <!--      </div>-->
-            <!--      <div class="reviews-marks">-->
-            <!--        <ul>-->
-            <!--          <li>Cleanliness<span><span class="stars-perc"><span style="width:85%"></span></span>4.5</span></li>-->
-            <!--          <li>Location<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>-->
-            <!--          <li>Staff<span><span class="stars-perc"><span style="width:100%"></span></span>5.0</span></li>-->
-            <!--          <li>Free Wi-Fi<span><span class="stars-perc"><span style="width:65%"> </span></span>3.5</span></li>-->
-            <!--        </ul>-->
-            <!--        <ul>-->
-            <!--          <li>Comfort<span><span class="stars-perc"><span style="width:85%"> </span></span>4.5</span></li>-->
-            <!--          <li>Facilities<span><span class="stars-perc"><span style="width:80%"></span></span>4.0</span></li>-->
-            <!--          <li>Value for money<span><span class="stars-perc"><span style="width:100%"> </span></span>5.0</span></li>-->
-            <!--        </ul>-->
-            <!--      </div>-->
-            <!--    </div>-->
-            <!--    <div class="comments">-->
-            <!--      <div class="comment-body">-->
-            <!--        <div class="avatar"><img src="pic/blog/90x90/1.jpg" data-at2x="pic/blog/90x90/1@2x.jpg" alt>12 Reviews</div>-->
-            <!--        <div class="comment-info">-->
-            <!--          <div class="comment-meta">-->
-            <!--            <div class="title">-->
-            <!--              <h5>Lovely clean, comfortable hotel <span>Rachel George</span></h5>-->
-            <!--            </div>-->
-            <!--            <div class="comment-date">-->
-            <!--              <div class="stars stars-5">5</div><span>Mon, 03-23-2016</span>-->
-            <!--            </div>-->
-            <!--          </div>-->
-            <!--          <div class="comment-content">-->
-            <!--            <p>Proin ut pretium sem. Maecenas id commodo massa. Sed vitae urna hendrerit, commodo dolor non, porttitor odio. Suspendisse ac arcu eu enim lobortis luctus sed quis velit. Nam ut vestibulum orci, at sodales libero. Fusce egestas urna a dolor fermentum, id tincidunt leo eleifend. Phasellus pulvinar hendrerit pulvinar.</p>-->
-            <!--          </div>-->
-            <!--        </div>-->
-            <!--      </div>-->
-            <!--      <div class="comment-body">-->
-            <!--        <div class="avatar"><img src="pic/blog/90x90/2.jpg" data-at2x="pic/blog/90x90/2@2x.jpg" alt>12 Reviews</div>-->
-            <!--        <div class="comment-info">-->
-            <!--          <div class="comment-meta">-->
-            <!--            <div class="title">-->
-            <!--              <h5>Brilliant hotel with history <span>Phillip Ferguson</span></h5>-->
-            <!--            </div>-->
-            <!--            <div class="comment-date">-->
-            <!--              <div class="stars stars-4">4</div><span>Mon, 03-23-2016</span>-->
-            <!--            </div>-->
-            <!--          </div>-->
-            <!--          <div class="comment-content">-->
-            <!--            <p>Vestibulum tellus justo, scelerisque sit amet imperdiet et, placerat non massa. Aliquam erat volutpat. Proin vitae enim cursus, dapibus est at, feugiat mauris. Sed molestie dolor sed ante dictum dictum. Quisque at nulla ipsum. Praesent interdum euismod turpis, eget tristique justo porta eu. Cras ullamcorper pulvinar nibh, eget faucibus neque porta in.</p>-->
-            <!--          </div>-->
-            <!--        </div>-->
-            <!--      </div>-->
-            <!--    </div>-->
-            <!--    <div class="reviews-bottom">-->
-            <!--      <h4>You've been in this hotel?</h4>-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--</div>-->
-        <!-- review -->
-            <!--<div class="container">-->
-            <!--  <div class="row">-->
-            <!--    <div class="col-md-12">-->
-            <!--      <h4 class="trans-uppercase mb-10">Write a review</h4>-->
-            <!--      <div class="cws_divider mb-30"></div>-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--  <div class="review-content pattern relative">-->
-            <!--    <div class="row">-->
-            <!--      <div class="col-md-5 mb-md-30 mb-xs-0">-->
-            <!--        <div class="review-total"><img src="pic/blog/120x120.jpg" data-at2x="pic/blog/120x120@2x.jpg" alt>-->
-            <!--          <div class="review-total-content">-->
-            <!--            <h6>Hotel Bohemians</h6>-->
-            <!--            <div class="stars stars-4"></div>-->
-            <!--            <ul class="icon">-->
-            <!--              <li>Istanbul, Turkey<i class="flaticon-suntour-map"></i></li>-->
-            <!--            </ul>-->
-            <!--          </div>-->
-            <!--        </div>-->
-            <!--      </div>-->
-            <!--      <div class="col-md-7">-->
-            <!--        <div class="review-marks clearfix mb-30">-->
-            <!--          <ul>-->
-            <!--            <li>Cleanliness-->
-            <!--              <div class="stars stars-5"></div>-->
-            <!--            </li>-->
-            <!--            <li>Location-->
-            <!--              <div class="stars stars-5"></div>-->
-            <!--            </li>-->
-            <!--            <li>Staff-->
-            <!--              <div class="stars stars-5"></div>-->
-            <!--            </li>-->
-            <!--            <li>Free Wi-Fi-->
-            <!--              <div class="stars stars-5"></div>-->
-            <!--            </li>-->
-            <!--          </ul>-->
-            <!--          <ul>-->
-            <!--            <li>Comfort-->
-            <!--              <div class="stars stars-5"></div>-->
-            <!--            </li>-->
-            <!--            <li>Facilities-->
-            <!--              <div class="stars stars-5"></div>-->
-            <!--            </li>-->
-            <!--            <li>Value for money-->
-            <!--              <div class="stars stars-5"></div>-->
-            <!--            </li>-->
-            <!--          </ul>-->
-            <!--        </div>-->
-            <!--      </div>-->
-            <!--    </div>-->
-            <!--    <form class="form clearfix">-->
-            <!--      <div class="row">-->
-            <!--        <div class="col-md-4">-->
-            <!--          <input type="text" name="email" value="" size="40" placeholder="First Name" aria-required="true" class="form-row form-row-first">-->
-            <!--        </div>-->
-            <!--        <div class="col-md-4">-->
-            <!--          <input type="text" name="email" value="" size="40" placeholder="Last Name" aria-required="true" class="form-row form-row-first">-->
-            <!--        </div>-->
-            <!--        <div class="col-md-4">-->
-            <!--          <input type="text" name="email" value="" size="40" placeholder="Booking Number" aria-required="true" class="form-row form-row-first">-->
-            <!--        </div>-->
-            <!--        <div class="col-md-12">-->
-            <!--          <input type="text" name="password" value="" size="40" placeholder="Title of your review" aria-required="true" class="form-row form-row-last">-->
-            <!--        </div>-->
-            <!--        <div class="col-md-12">-->
-            <!--          <textarea name="message" cols="40" rows="4" placeholder="Message of your review" aria-invalid="false" aria-required="true" class="mb-20"></textarea>-->
-            <!--          <input type="submit" value="Add a review" class="cws-button alt float-right">-->
-            <!--        </div>-->
-            <!--      </div>-->
-            <!--    </form>-->
-            <!--  </div>-->
-            <!--</div>-->
-        <!-- ! review -->
       </section>
     </div>
 

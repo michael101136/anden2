@@ -41,10 +41,6 @@
               <div class="detail-content-block">
                 <h3>DESCRIPCION</h3>
                 <p>{{$detalleTour->descripcion}}</p>
-                  
-                <h5>interesting for you</h5>
-
-                <p>Pellentesque ac turpis egestas, varius justo et, condimentum augue. Praesent aliquam, nisl feugiat vehicula condimentum, justo tellus scelerisque metus. Pellentesque varius justo et, condimentum augue.</p>
 
               </div>
               <div class="detail-top slider-wth-thumbs style-1 arrows">
@@ -77,92 +73,36 @@
                   <div class="pagination hidden"></div>
                 </div>
               </div>
+              <div class="detail-content-block">
+                
+                  
+                <h5>interesting for you</h5>
+
+                <p>{!!$detalleTour->organizacion!!}</p>
+
+              </div>
 
           
           <div class="detail-content-block">
             <h3>ITINERARIO</h3>
                       <div class="accordion style-1">
-                          <div class="acc-panel">
-                              <div class="acc-title"><span class="acc-icon"></span>How can I manage Instant Book settings?</div>
-                              <div class="acc-body">
-                  <h5>metus Aenean eget massa</h5>
-                  <p>Mauris posuere diam at enim malesuada, ac malesuada erat auctor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim.</p>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                      <ul>
-                        <li>Shopping history</li>
-                        <li>Hot offers according your settings</li>
-                        <li>Multi-product search</li>
-                        <li>Opportunity to share with friends</li>
-                        <li>User-friendly interface</li>
-                      </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                      <ul>
-                        <li>Shopping history</li>
-                        <li>Hot offers according your settings</li>
-                        <li>Multi-product search</li>
-                        <li>Opportunity to share with friends</li>
-                        <li>User-friendly interface</li>
-                      </ul>                 
-                    </div>
-                  </div>
+                        @foreach($itinerario as $item)
+                        @if($item->dia == '1')
+                          <div class="acc-panel features">
+                              <div class="acc-title active"><span class="acc-icon"></span>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</div>
+                              <div class="acc-body" style="display: block;">
+                                <p>{!!$item->descripcionitinerario!!}</p>  
                               </div>
                           </div>
+                          @else
                           <div class="acc-panel">
-                              <div class="acc-title"><span class="acc-icon"></span>How do I list multiple rooms?</div>
+                              <div class="acc-title"><span class="acc-icon"></span>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</div>
                               <div class="acc-body">
-                  <h5>metus Aenean eget massa</h5>
-                  <p>Mauris posuere diam at enim malesuada, ac malesuada erat auctor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim.</p>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                      <ul>
-                        <li>Shopping history</li>
-                        <li>Hot offers according your settings</li>
-                        <li>Multi-product search</li>
-                        <li>Opportunity to share with friends</li>
-                        <li>User-friendly interface</li>
-                      </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                      <ul>
-                        <li>Shopping history</li>
-                        <li>Hot offers according your settings</li>
-                        <li>Multi-product search</li>
-                        <li>Opportunity to share with friends</li>
-                        <li>User-friendly interface</li>
-                      </ul>                 
-                    </div>
-                  </div>
+                                <p>{!!$item->descripcionitinerario!!}</p>  
                               </div>
                           </div>
-                          <div class="acc-panel">
-                              <div class="acc-title"><span class="acc-icon"></span>How do I use my calendar?</div>
-                              <div class="acc-body">
-                  <h5>metus Aenean eget massa</h5>
-                  <p>Mauris posuere diam at enim malesuada, ac malesuada erat auctor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim. Suspendisse id pharetra lacus, et hendrerit mi. Praesent at vestibulum tortor. Ut porta mattis tellus eu sagittis. Nunc maximus ipsum a mattis dignissim.</p>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                      <ul>
-                        <li>Shopping history</li>
-                        <li>Hot offers according your settings</li>
-                        <li>Multi-product search</li>
-                        <li>Opportunity to share with friends</li>
-                        <li>User-friendly interface</li>
-                      </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                      <ul>
-                        <li>Shopping history</li>
-                        <li>Hot offers according your settings</li>
-                        <li>Multi-product search</li>
-                        <li>Opportunity to share with friends</li>
-                        <li>User-friendly interface</li>
-                      </ul>                 
-                    </div>
-                  </div>
-                              </div>
-                          </div>                                                                                                                        
+                           @endif
+                           @endforeach          
                       </div>                      
           </div>                    
         </div>            
@@ -170,7 +110,7 @@
           <div class="col-xs-12 col-lg-4">
             <div class="right-sidebar">
               <div class="detail-block bg-blue-2">
-                <h4 class="color-white">details</h4>
+                <h4 class="color-white">RESERVA</h4>
                 <div class="details-desc">
               <p class="color-blue-4">Category:  <span class="color-white">sea tour</span></p>
               <p class="color-blue-4">price: <span class="color-white">$500 / person</span></p>
@@ -232,7 +172,7 @@
             </div>                      
           </div>
 
-          <div class="sidebar-text-label bg-blue-2 color-white">useful information</div>
+          <div class="sidebar-text-label bg-blue-2 color-white">CONTACTO</div>
 
           <div class="help-contact bg-grey-2">
             <h4 class="color-dark-2">Need Help?</h4>
@@ -250,7 +190,7 @@
               <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
             <div class="hotel-item style-11 bg-white">
                     <div class="radius-top">
-                      <img src="img/tour_list/tour_grid_1.jpg" alt="">               
+                      <img src="/plantilla/img/tour_list/tour_grid_1.jpg" alt="">               
                     </div>
                     <div class="title bg-grey-2">
                       <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
@@ -272,7 +212,7 @@
               <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
             <div class="hotel-item style-11 bg-white">
                     <div class="radius-top">
-                      <img src="img/tour_list/tour_grid_2.jpg" alt="">               
+                      <img src="/plantilla/img/tour_list/tour_grid_2.jpg" alt="">               
                     </div>
                     <div class="title bg-grey-2">
                       <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
@@ -294,7 +234,7 @@
               <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
             <div class="hotel-item style-11 bg-white">
                     <div class="radius-top">
-                      <img src="img/tour_list/tour_grid_3.jpg" alt="">               
+                      <img src="/plantilla/img/tour_list/tour_grid_3.jpg" alt="">               
                     </div>
                     <div class="title bg-grey-2">
                       <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
@@ -312,277 +252,12 @@
                       <div class="hotel-person color-dark-2">from <span>$300</span> person</div>
                     </div>
               </div>            
-              </div>
-              <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
-            <div class="hotel-item style-11 bg-white">
-                    <div class="radius-top">
-                      <img src="img/detail/interested.jpg" alt="">               
-                    </div>
-                    <div class="title bg-grey-2">
-                      <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
-                        <h4><b>TOURS IN ITALY</b></h4>
-                             <div class="rate-wrap">
-                              <div class="rate">
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    </div>
-                      <i>485 rewies</i> 
-                            </div> 
-                      <div class="hotel-person color-dark-2">from <span>$300</span> person</div>
-                    </div>
-              </div>            
-              </div>                                
+              </div>                               
             </div>
         </div>
         </div>
   </div>
 </div>
-
-<div class="content-body">
-
-      <section class="page-section pt-0 pb-50">
-        <br/>
-        <div class="container" >
-            <h4 class="mb-20">{{$detalleTour->descripcion}}</h4>
-        </div>
-
-        <div class="container">
-          <div id="flex-slider" class="flexslider">
-            <ul class="slides">
-                @foreach($multimedia as $item)
-                    <li><img src="{{$item->img}}" alt ></li>
-                @endforeach
-
-            </ul>
-          </div>
-          <div id="flex-carousel" class="flexslider">
-            <ul class="slides">
-                 @foreach($multimedia as $item)
-              <li><img src="{{$item->img}}" data-at2x="{{$item->img}}" alt ></li>
-                  @endforeach
-
-            </ul>
-          </div>
-        </div>
-        <div class="container mt-30">
-        
-            
-          <!--<h4 class="mb-20">DETALLES</h4>-->
-          <div class="row">
-            <div class="col-md-8">
-              <div class="tabs">
-                <div class="block-tabs-btn clearfix">
-                    <div data-tabs-id="tabs3" class="tabs-btn active">Itinerarios</div>
-                    <div data-tabs-id="tabs2" class="tabs-btn">Precios</div>
-                    <div data-tabs-id="tabs1" class="tabs-btn">Incluye</div>
-             
-                
-                </div>
-                <!-- tabs keeper-->
-                <div class="tabs-keeper">
-                  <!-- tabs container-->
-                  <div data-tabs-id="cont-tabs1" class="container-tabs ">
-                    <h6 class="trans-uppercase"> </h6>
-                    <p>{!!$detalleTour->organizacion!!} </p>
-                    <!--<ul class="style-3">-->
-                    <!--  <li>Nam molestie dolor id auctor sodales;</li>-->
-                    <!--  <li>In sagittis dolor vel turpis aliquet pharetra;</li>-->
-                    <!--  <li>Quisque non turpis in dui congue dapibus;</li>-->
-                    <!--  <li>Vivamus varius nisl quis dictum maximus;</li>-->
-                    <!--  <li>Vestibulum scelerisque ligula quis est faucibus tincidunt.</li>-->
-                    <!--</ul>-->
-                  </div>
-                  <!-- /tabs container-->
-                  <!-- tabs container-->
-                  <div data-tabs-id="cont-tabs2" class="container-tabs">
-                   
-                   <div class="row">
-                            <div class="mb-md-50"><img src="pic/promo-2.jpg" alt class="mt-minus-100"></div>
-                            <div class="col-md-12">
-                     
-                               <div class="search-hotels room-search pattern">
-                                    <div class="search-room-title">
-                                      <h5>Precios del tour</h5>
-                                    </div>
-                                    <div class="tours-container">
-                                      <div class="tours-box">
-                                        <div class="tours-search mb-10">
-                                          <form method="post" class="form search divider-skew">
-                                            <div class="search-wrap">
-                                              <input type="text" placeholder="Destination" class="form-control search-field"><i class="flaticon-suntour-map search-icon"></i>
-                                            </div>
-                                          </form>
-                                         
-                                          <div class="selection-box divider-skew"><i class="flaticon-suntour-adult box-icon"></i>
-                                            <select>
-                                              <option>Adult</option>
-                                              <option>1</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
-                                            </select>
-                                          </div>
-                                          <div class="selection-box divider-skew"><i class="flaticon-suntour-children box-icon"></i>
-                                            <select>
-                                              <option>Child</option>
-                                              <option>1</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
-                                            </select>
-                                          </div>
-                                          <div class="selection-box"><i class="flaticon-suntour-bed box-icon"></i>
-                                            <select>
-                                              <option>Room</option>
-                                              <option>1</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
-                                            </select>
-                                          </div>
-                                          <div class="button-search">GO</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                               <div class="room-table">
-                                <table class="table alt-2">
-                                  <thead>
-                                    <tr>
-                                      <th>Room Type</th>
-                                      <th>Max.</th>
-                                      <th>Options</th>
-                                      <th>Today's price</th>
-                   
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td> <img src="pic/190x130.jpg" data-at2x="pic/190x130@2x.jpg" alt>
-                                        <h6>Grand Hotel Wien</h6>
-                                        <p class="mb-0">(Extra beds available: Crib, <br> Rollaway bed) Room sleeps <br> 4 guests (up to 3 children)</p>
-                                      </td>
-                                      <td> 
-                                        <div class="table-icon"><i class="flaticon-people"></i><i class="flaticon-people"></i><i class="flaticon-people"></i><i class="flaticon-people"></i><i class="flaticon-people alt"></i></div>
-                                        <p>4 guest</p>
-                                      </td>
-                                      <td> 
-                                        <ul class="style-1">
-                                          <li>Special conditions, pay when you stay</li>
-                                          <li>Breakfast included</li>
-                                          <li>Free Parking</li>
-                                        </ul>
-                                      </td>
-                                      <td class="room-price">$120</td>
-                                     
-                                    </tr>
-                                    <tr>
-                                      <td> <img src="pic/190x130.jpg" data-at2x="pic/190x130@2x.jpg" alt>
-                                        <h6>Deluxe Room, Sea View</h6>
-                                        <p class="mb-0">(Extra beds available: Crib, <br> Rollaway bed)</p>
-                                      </td>
-                                      <td> 
-                                        <div class="table-icon"><i class="flaticon-people"></i><i class="flaticon-people"></i><i class="flaticon-people alt"></i><i class="flaticon-people alt"></i><i class="flaticon-people alt"></i></div>
-                                        <p>2 guest</p>
-                                      </td>
-                                      <td> 
-                                        <ul class="style-1">
-                                          <li>Special conditions, pay when you stay</li>
-                                          <li>Breakfast included</li>
-                                          <li>Free Parking</li>
-                                          <li>Free Internet</li>
-                                        </ul>
-                                      </td>
-                                      <td class="room-price">Sold out</td>
-                                     
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
-                           
-                            </div>
-                    </div>
-                 
-                  </div>
-                  <!-- /tabs container-->
-                  <!-- tabs container-->
-                  <div data-tabs-id="cont-tabs3" class="container-tabs active">
-                
-                         <div class="row">
-                            <div class="mb-md-50"><img src="pic/promo-2.jpg" alt class="mt-minus-100"></div>
-                            <div class="col-md-12">
-                              <!-- section title-->
-                                  <!--<h2 class="title-section mt-0 mb-0">About us</h2>-->
-                              <!-- ! section title-->
-                                  <!--<div class="cws_divider with-plus short-3 mb-20 mt-10"></div>-->
-                              <!--<p class="mb-50">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>-->
-                              <!-- accordion-->
-                              
-                              
-                              <div class="toggle style-2">
-                                
-                               
-                                @foreach($itinerario as $item)
-                                    @if($item->dia == '1')
-                                        <div class="content-title active"> <span class="active"><i class="active-icon"></i>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</span></div>
-                                        <div class="content">{!!$item->descripcionitinerario!!}</div>
-                                    @else
-                                        <div class="content-title"> <span><i class="active-icon"></i>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</span></div>
-                                        <div class="content">{!!$item->descripcionitinerario!!} </div>
-                                   @endif
-                              @endforeach
-                              </div>
-              
-                              
-                            </div>
-                    </div>
-                   
-                
-                  </div>
-                  <!-- /tabs container-->
-                </div>
-                <!-- /tabs keeper-->
-              </div>
-            </div>
-            <!--<div class="col-md-8">-->
-            <!-- hola-->
-            <!--</div>-->
-            <div class="col-md-4">
-                
-             <div class="cws-widget">
-                <div class="widget-top-sellers">
-                  <h2 class="widget-title"> CATEGORIAS</h2>
-                  <!-- item recent post-->
-                  <div class="item-top-sellers clearfix">
-                      <img src="/public/tours/categoria/1.jpg"  onclick="listar_categorias('aventura');" data-at2x="/public/tours/categoria/1.jpg" alt>
-                      <h3 class="title"><a href="javascript:;" onclick="listar_categorias('aventura');">AVENTURA</a></h3>
-                  </div>
-                  <!-- ! item recent post-->
-                  <!-- item recent post-->
-                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/2.jpg" onclick="listar_categorias('mistico');" data-at2x="/public/tours/categoria/2.jpg" alt>
-                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('mistico');">MÍSTICO</a></h3>
-                  </div>
-                  <!-- ! item recent post-->
-                  <!-- item recent post-->
-                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/3.jpg" onclick="listar_categorias('tradicional');" data-at2x="/public/tours/categoria/3.jpg" alt>
-                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('tradicional');">TRADICIONAL</a><span style="width:80%"></span></h3>
-                  </div>
-                  <!-- ! item recent post-->
-                  
-                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/4.jpg" onclick="listar_categorias('vivencial');" data-at2x="/public/tours/categoria/4.jpg" alt>
-                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('vivencial');">VIVENCIAL</a><span style="width:80%"></span></h3>
-                  </div>
-                </div>
-                     </div>
-            </div>
-          </div>
-        </div>
-        <!-- section prices-->
-      </section>
-    </div>
 
 @endsection
 

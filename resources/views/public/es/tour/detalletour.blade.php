@@ -115,37 +115,27 @@
                   <form class="contact-form" action="#">
                     <div class="row">
                       <div class="col-xs-12 col-sm-6">
-                        <div class="input-style-1 type-2 b-40 color-3">
-                            <input type="text" required="" placeholder="Enter your name">
+                        <div class=" input-style-1 type-2  color-3">
+                            <input class="b-30" type="text" required="" placeholder="nombre completo">
                         </div>
                       </div>
                       <div class="col-xs-12 col-sm-6">
                         <div class="input-style-1 type-2 color-3">
-                            <input type="text" required="" placeholder="Enter your email">
+                            <input type="text" required="" placeholder="nacionalidad">
                         </div>
                       </div>
                       <div class="col-xs-12 col-sm-6">
                         <div class="input-style-1 type-2 color-3">
-                            <input type="text" required="" placeholder="Enter your name">
+                            <input type="text" required="" placeholder="número telefonico">
                         </div>
                       </div>  
                       <div class="col-xs-12 col-sm-6">
-                        <div class="drop-wrap drop-wrap-s-3 color-2">
-                            <div class="drop">
-                            <b>Department</b>
-                            <a href="#" class="drop-list"><i class="fa fa-angle-down"></i></a>
-                            <span>
-                                <a href="#">01 kids</a>
-                              <a href="#">02 kids</a>
-                              <a href="#">03 kids</a>
-                              <a href="#">04 kids</a>
-                              <a href="#">05 kids</a>
-                            </span>
-                            </div>
-                        </div>            
-                      </div>
+                        <div class="input-style-1 datepicker hasDatepicker color-3">
+                            <input type="date" required="" placeholder="fecha de viaje">
+                        </div>
+                      </div> 
                       <div class="col-xs-12">
-                        <textarea class="area-style-1 color-1" required="" placeholder="Enter your comment"></textarea>
+                        <textarea class="area-style-1 color-3" required="" placeholder="Enter your comment"></textarea>
                         <div class="text-center">
                           <button type="submit" class="c-button b-40 bg-white hv-transparent"><span>book now</span></button>
                         </div>

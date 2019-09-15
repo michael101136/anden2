@@ -323,74 +323,11 @@
         </div>
       </div>
     </div>
-<div class="content-body">
-
-      <div class="container page">
-        <div class="row">
-          <div class="col-md-4">
-            
-            <div class="cws-widget">
-                <div class="widget-top-sellers">
-                  <h2 class="widget-title"> CATEGORIAS</h2>
-                  <!-- item recent post-->
-                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/3.jpg" onclick="listar_categorias('tradicional');" data-at2x="/public/tours/categoria/3.jpg" alt>
-                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('tradicional');">TRADICIONAL</a><span style="width:80%"></span></h3>
-                  </div>
-                  <!-- ! item recent post-->
-                  
-                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/4.jpg" onclick="listar_categorias('vivencial');" data-at2x="/public/tours/categoria/4.jpg" alt>
-                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('vivencial');">VIVENCIAL</a><span style="width:80%"></span></h3>
-                  </div>
-                </div>
-             </div>
-              
-          </div>
-                       
-          
-          <div class="col-md-8" id="categoria">
-            <!-- Recomended item-->
-             @foreach($data as $item)
-            <div class="recom-item border">
-           
-              <div class="recom-media"><a href="{{route('detalletour',['tour'=>$item->slug])}}">
-                  <div class="pic" style="width: 220px; height: 220px;"><img src="{{$item->img}}" data-at2x="{{$item->img}}" alt></div></a>
-                <!-- <div class="location"><i class="flaticon-suntour-map"></i> Istanbul, Turkey</div> -->
-              </div>
-              <!-- Recomended Content-->
-             
-              <div class="recom-item-body"><a href="{{route('detalletour',['tour'=>$item->slug])}}">
-                  <h6 class="blog-title">{{$item->nombretour}}</h6></a>
-                <div class="stars stars-4"></div>
-                <div class="recom-price"><span class="font-4">$90</span> per night</div>
-                <p class="mb-30">{{$item->descripciontour}}</p><a href="{{route('detalletour',['tour'=>$item->slug])}}" class="cws-button small alt">Leer más</a>
-                <!--<div class="action font-2">20%</div>-->
-              </div>
-             
-              <!-- Recomended Image-->
-            </div>
-       
-             @endforeach
-           {!! $data->render() !!}
-          </div>
-            <div id="procesoCarga" style="position: absolute;z-index: 100;margin-left: 700px;margin-top: 300px;"> 
-          
-        </div>
-      </div>
-      <!-- call out section-->
-   
-      <!-- ! call out section	-->
-    </div>
-@endsection
-
 
 @section('script')
 
 <script>
-
-
-
 $(document).on('click','.pagination a', function(e){
-
     e.preventDefault();
     var page=$(this).attr('href').split('page=')[1];
     $('#procesoCarga').html('<div class="loading"><img src="/public/img/carga2.gif" alt="loading" /><br/></div>');
@@ -400,16 +337,11 @@ $(document).on('click','.pagination a', function(e){
                 type: 'GET',           
                 dataType:'json',
                 success: function(data)             
-                {
-                
+                {                
                   $("#categoria").html(data);
-                  $('#procesoCarga').html('');
-                  
+                  $('#procesoCarga').html('');                  
                 }
         });  
-        
-    
-
 });
 
 function listar_categorias(categoria)
@@ -430,9 +362,7 @@ function listar_categorias(categoria)
         });  
         
      return false;  
-}
-       
-     
+}          
 </script>
 
 @endsection

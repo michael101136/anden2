@@ -6,7 +6,7 @@
       <div class="swiper-container main-slider" style="height:900px;" data-autoplay="5000" data-loop="1" data-speed="900" data-center="0" data-slides-per-view="1">
         <div class="swiper-wrapper">
           <div class="swiper-slide active" data-val="0"> 
-            <div class="clip" style="margin-top: 48px;position: absolute;height: 70%">
+            <div class="clip" style="position: absolute;height: 70%">
              <div class="bg bg-bg-chrome act" style="background-image:url(plantilla/img/home_1/main_slide_11.jpg)">
              </div>
             </div>

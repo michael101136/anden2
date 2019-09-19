@@ -10,14 +10,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">  
+    <link href="css/style.css" rel="stylesheet" type="text/css"/> 
     	 @include('public.partials.header')
 
     <title>{{ config ('app.name') }}</title>
 
 </head>
 
-<body>
+<body data-color="theme-1">
    
       @include('public.es.layouts.navbar')
 

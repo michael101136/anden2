@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no" />
            
     <link rel="shortcut icon" href="/assets/public/img/icons.png"/> 
-    
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">   
     	 @include('public.partials.header')
 

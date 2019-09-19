@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- INNER-BANNER -->
+<!-- INNER-BANNER --
 <div class="inner-banner style-6">
   <img class="center-image" src="/public/img/baner-tour.jpg" alt="">
   <div class="vertical-align">
@@ -19,15 +19,15 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- DETAIL WRAPPER -->
 <div class="detail-wrapper">
   <div class="container">
     <div class="detail-header">
       <div class="row">
         <div class="col-xs-12 col-sm-8">
-          <div class="detail-category color-grey-3">Champs-Elysées, Paris France</div>
-          <h2 class="detail-title color-dark-2">10 Days of Vacation in paris Resorts</h2>
+          <!--<div class="detail-category color-grey-3">Champs-Elysées, Paris France</div>-->
+          <h2 class="detail-title color-dark-2" style="padding-top: 90px;">{{$detalleTour->nombre}}</h2>
           
           </div>
           <!-- <div class="col-xs-12 col-sm-4">
@@ -37,6 +37,7 @@
         </div>
         <div class="row padd-90">
           <div class="col-xs-12 col-lg-8">
+
             <div class="detail-content">
               <div class="detail-content-block">
                 <h3>DESCRIPCION</h3>
@@ -74,37 +75,59 @@
                 </div>
               </div>
               <div class="detail-content-block">
-                
-                  
-                <h5>interesting for you</h5>
+                <div class="simple-tab type-2 tab-wrapper">
+                  <div class="tab-nav-wrapper">
+                    <div  class="nav-tab  clearfix" style="text-align: left;">
+                      <div class="nav-tab-item active">
+                        ITINERARIO
+                      </div>
+                      <div class="nav-tab-item">
+                        INCLUYE
+                      </div>                                                           
+                    </div>
+                  </div>
+                  <div class="tabs-content tabs-wrap-style clearfix">
+                               
+                    <div class="tab-info active">
+                      <div class="acc-body">
+                                              
+                              <h3>ITINERARIO</h3>
+                                        <div class="accordion style-1">
+                                          @foreach($itinerario as $item)
+                                          @if($item->dia == '1')
+                                            <div class="acc-panel features">
+                                                <div class="acc-title active"><span class="acc-icon"></span>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</div>
+                                                <div class="acc-body" style="display: block;">
+                                                  <p>{!!$item->descripcionitinerario!!}</p>  
+                                                </div>
+                                            </div>
+                                            @else
+                                            <div class="acc-panel">
+                                                <div class="acc-title"><span class="acc-icon"></span>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</div>
+                                                <div class="acc-body">
+                                                  <p>{!!$item->descripcionitinerario!!}</p>  
+                                                </div>
+                                            </div>
+                                             @endif
+                                             @endforeach          
+                                        </div>                      
+                            
+                      </div>
+                    </div>
+                    <div class="tab-info">
+                       <div class="acc-body">
+                        
+                        <p>{!!$detalleTour->organizacion!!}</p>
+                       </div>
+                    </div>
+                  </div>
 
-                <p>{!!$detalleTour->organizacion!!}</p>
+                </div>
 
               </div>
 
           
-          <div class="detail-content-block">
-            <h3>ITINERARIO</h3>
-                      <div class="accordion style-1">
-                        @foreach($itinerario as $item)
-                        @if($item->dia == '1')
-                          <div class="acc-panel features">
-                              <div class="acc-title active"><span class="acc-icon"></span>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</div>
-                              <div class="acc-body" style="display: block;">
-                                <p>{!!$item->descripcionitinerario!!}</p>  
-                              </div>
-                          </div>
-                          @else
-                          <div class="acc-panel">
-                              <div class="acc-title"><span class="acc-icon"></span>DÍA {{$item->dia}}: {{$item->itinerarionombre}}</div>
-                              <div class="acc-body">
-                                <p>{!!$item->descripcionitinerario!!}</p>  
-                              </div>
-                          </div>
-                           @endif
-                           @endforeach          
-                      </div>                      
-          </div>                    
+                             
         </div>            
           </div>
           <div class="col-xs-12 col-lg-4">
@@ -264,7 +287,29 @@
                       <div class="hotel-person color-dark-2">from <span>$300</span> person</div>
                     </div>
               </div>            
-              </div>                               
+              </div>    
+              <div class="col-mob-12 col-xs-6 col-sm-6 col-md-3">
+            <div class="hotel-item style-11 bg-white">
+                    <div class="radius-top">
+                      <img src="/plantilla/img/tour_list/tour_grid_3.jpg" alt="">               
+                    </div>
+                    <div class="title bg-grey-2">
+                      <div class="date list-hidden">July <strong>19th</strong> to July <strong>26th</strong></div>
+                        <h4><b>TOURS IN ITALY</b></h4>
+                             <div class="rate-wrap">
+                              <div class="rate">
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    <span class="fa fa-star color-yellow"></span>
+                    </div>
+                      <i>485 rewies</i> 
+                            </div> 
+                      <div class="hotel-person color-dark-2">from <span>$300</span> person</div>
+                    </div>
+              </div>            
+              </div>                            
             </div>
         </div>
         </div>

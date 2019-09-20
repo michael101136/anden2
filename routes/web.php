@@ -26,8 +26,9 @@ Route:: get('/detalle_tour1','PublicController@detalleTour1')->name('detalle_tou
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::view('/about-us','public.es.nosotros');
+Route::view('/about-us','public.es.nosotros.index');
 Route::view('/reviews','public.es.testimonios');
+Route::view('/blog','public.es.blog.blog');
 Route::get('/paquete/{categoria?}',['uses'=>'PublicController@tours'])->name('paquete');
 
 Route::resource('tipoAlojamientos', 'TipoAlojamientoController');

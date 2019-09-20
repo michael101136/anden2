@@ -1,26 +1,15 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-<div class="top-baner arrows">
+<div class="top-baner arrows" style="margin-top:120px; ">
   <div class="swiper-container" data-autoplay="0" data-loop="1" data-speed="1000" data-center="0" data-slides-per-view="1" id="tour-slide-2">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="inner-banner style-3">
-          <img class="center-image" src="/plantilla/img/tour_list/bg_1.jpg" alt="">
+          <img class="center-image" src="/plantilla/img/bg-tradicional.jpg" alt="">
           <div class="vertical-align">
-            <div class="container">
-                <h4 class="color-white">hot propose</h4>
-                <div class="rate-wrap clearfix">
-                  <div class="rate">
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                  </div>
-                  <i>485 Rewies</i> 
-                </div>                  
-                <h2 class="color-white">All tours for you </h2>
+            <div>                 
+                <h2 class="color-white">Tours tradicionales </h2>
                 <h3 class="color-white"><span>from $960 /</span> person</h3>
             </div>
           </div>
@@ -28,22 +17,12 @@
       </div>
       <div class="swiper-slide">
             <div class="inner-banner style-3">
-              <img class="center-image" src="/plantilla/img/tour_list/bg_2.jpg" alt="">
+              <img class="center-image" src="/plantilla/img/bg-vivencial.jpg" alt="">
               <div class="vertical-align">
                 <div class="container">
-                  <h4 class="color-white">hot propose</h4>
-                <div class="rate-wrap clearfix">
-                              <div class="rate">
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    <span class="fa fa-star color-yellow"></span>
-                    </div>
-                      <i>485 Rewies</i> 
-                            </div>                  
-                  <h2 class="color-white">honeymoon cruise</h2>
-                  <h3 class="color-white"><span>from $960 /</span> person</h3>
+                                    
+                  <h2 class="color-white">Tours vivenviales</h2>
+                  <h3 class="color-white"><span>from $1960 /</span> person</h3>
                 </div>
               </div>
             </div>

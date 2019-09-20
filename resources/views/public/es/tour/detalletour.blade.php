@@ -2,9 +2,9 @@
 
 @section('content')
 
-<!-- INNER-BANNER --
-<div class="inner-banner style-6">
-  <img class="center-image" src="/public/img/baner-tour.jpg" alt="">
+<!-- INNER-BANNER -->
+<div class="inner-banner style-6" style="margin-top: 120px">
+  <img class="center-image" src="/plantilla/img/bg_blog.jpg" alt="">
   <div class="vertical-align">
     <div class="container">
       <div class="row">
@@ -12,14 +12,14 @@
             <ul class="banner-breadcrumb color-white clearfix">
               <li><a class="link-blue-2" href="#">home</a> /</li>
               <li><a class="link-blue-2" href="#">tours</a> /</li>
-              <li><span>detail</span></li>
+              <li><span>detalle</span></li>
             </ul>
             <h2 class="color-white">{{$detalleTour->nombre}}</h2>
           </div>
       </div>
     </div>
   </div>
-</div> -->
+</div> 
 <!-- DETAIL WRAPPER -->
 <div class="detail-wrapper">
   <div class="container">

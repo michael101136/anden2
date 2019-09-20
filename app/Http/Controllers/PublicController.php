@@ -14,10 +14,15 @@ class PublicController extends Controller
              ->select('tours.nombre as nombretour','tipo_categoria_tours.nombre as categoriatour','tours.img','tours.slug','tours.descripcion')
              ->join('tour_categoria','tour_categoria.tour_id','=','tours.id')
              ->join('tipo_categoria_tours','tipo_categoria_tours.id','=','tour_categoria.categoria_id')
-             ->paginate(4);
-             
+              ->where('tours.principal','=','1')
+             ->paginate(6);
+
+        $blogs = DB::table('blogs')
+         ->select('blogs.url','blogs.descripcioncorta','blogs.fechaPublicacion','blogs.id','blogs.titulo','blogs.contenido','blogs.urlimagen','categoria_blogs.nombre as tipoblog')
+         ->join('categoria_blogs','categoria_blogs.id','=','blogs.categoria_blog_id')  
+         ->orderby('fechaPublicacion','DESC') ->take(4)->get(); 
        
-   	return view('public.es.inicio',['data'=>$data]);
+   	return view('public.es.inicio',['data'=>$data,'blogs'=>$blogs]);
    	
    }
 

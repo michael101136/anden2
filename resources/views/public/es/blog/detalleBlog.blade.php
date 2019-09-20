@@ -197,329 +197,41 @@
           <div class="sidebar-block type-2">
             <h4 class="sidebar-title color-dark-2">categories</h4>
             <ul class="sidebar-category color-5">
-              <li>
-                <a href="#">all <span class="fr">(125)</span></a>
-              </li>
-              <li>
-                <a href="#">family <span class="fr">(26)</span></a>                 
-              </li>
-              <li>
-                <a href="#">adventure <span class="fr">(66)</span></a>                
-              </li>
-              <li>
-                <a href="#">romantic  <span class="fr">(59)</span></a>
-              </li>
-              <li>
-                <a href="#">wildlife  <span class="fr">(55)</span></a>
-              </li>
-              <li class="active">
-                <a href="#">beach  <span class="fr">(89)</span></a>
-              </li>                               
-              <li>
-                <a href="#">honeymoon  <span class="fr">(27)</span></a>
-              </li>
-              <li>
-                <a href="#">island  <span class="fr">(45)</span></a>
-              </li>
-              <li>
-                <a href="#">parks  <span class="fr">(72)</span></a>
-              </li>                                                 
+              @foreach($tipocategoria as $item)
+                <!--<li><a href="{{route('blogPorCategoria',['blog'=>$item->nombre])}}">{{$item->nombre}}</a></li>-->
+                <li><a href="#">{{$item->nombre}}</a></li>
+              @endforeach                                                
             </ul>
           </div> 
           <div class="sidebar-block type-2">
             <h4 class="sidebar-title color-dark-2">popular posts</h4>
             <div class="widget-popular">
+              @foreach($post as $item)
               <div class="hotel-small style-2 clearfix">
-                <a class="hotel-img black-hover" href="#">
-                  <img class="img-responsive radius-0" src="img/home_7/small_hotel_5.jpg" alt="">
+                <a class="hotel-img black-hover" href="{{route('detalleBlog',['blog'=>$item->url])}}">
+                  <img class="img-responsive radius-0" src="{{$item->urlimagen}}" alt="">
                   <div class="tour-layer delay-1"></div>                    
                 </a>
                 <div class="hotel-desc">
                   <div class="tour-info-line">
                     <div class="tour-info">
-                        <img src="img/calendar_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">03/07/2015</span>
+                        <img src="/plantilla/img/calendar_icon_grey.png" alt="">
+                        <span class="font-style-2 color-dark-2">{{$item->fechaPublicacion}}</span>
                       </div>
                     <div class="tour-info">
-                        <img src="img/people_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">By Emma Stone</span>
+                        <img src="/plantilla/img/people_icon_grey.png" alt="">
+                        <span class="font-style-2 color-dark-2">By {{$item->autor}}</span>
                       </div>          
                   </div>
-                    <h4>history of mauritius</h4>
-                  <div class="tour-info-line clearfix">
-                    <div class="tour-info">
-                        <img src="img/comment_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">10 comments</span>
-                      </div>            
-                  </div>                    
+                    <h4>{!!str_limit($item->titulo,60)!!}</h4>
+                                     
                 </div>
               </div>
-              <div class="hotel-small style-2 clearfix">
-                <a class="hotel-img black-hover" href="#">
-                  <img class="img-responsive radius-0" src="img/home_7/small_hotel_6.jpg" alt="">
-                  <div class="tour-layer delay-1"></div>                    
-                </a>
-                <div class="hotel-desc">
-                  <div class="tour-info-line">
-                    <div class="tour-info">
-                        <img src="img/calendar_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">03/07/2015</span>
-                      </div>
-                    <div class="tour-info">
-                        <img src="img/people_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                      </div>          
-                  </div>
-                    <h4>mauritius from 5 days</h4>
-                  <div class="tour-info-line clearfix">
-                    <div class="tour-info">
-                        <img src="img/comment_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">10 comments</span>
-                      </div>            
-                  </div>                    
-                </div>
-              </div>
-              <div class="hotel-small style-2 clearfix">
-                <a class="hotel-img black-hover" href="#">
-                  <img class="img-responsive radius-0" src="img/home_7/small_hotel_7.jpg" alt="">
-                  <div class="tour-layer delay-1"></div>                    
-                </a>
-                <div class="hotel-desc">
-                  <div class="tour-info-line">
-                    <div class="tour-info">
-                        <img src="img/calendar_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">03/07/2015</span>
-                      </div>
-                    <div class="tour-info">
-                        <img src="img/people_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                      </div>          
-                  </div>
-                    <h4>mauritius from 5 days</h4>
-                  <div class="tour-info-line clearfix">
-                    <div class="tour-info">
-                        <img src="img/comment_icon_grey.png" alt="">
-                        <span class="font-style-2 color-dark-2">10 comments</span>
-                      </div>            
-                  </div>                    
-                </div>
-              </div>                              
+              @endforeach
+                                           
             </div>
           </div>
-          <div class="sidebar-block type-2">
-                        <div class="simple-tab tab-3 color-1 tab-wrapper">
-                            <div class="tab-nav-wrapper">
-                                <div class="nav-tab  clearfix">
-                                    <div class="nav-tab-item active">
-                                        commented
-                                    </div>
-                                    <div class="nav-tab-item">
-                                        popular
-                                    </div>
-                                    <div class="nav-tab-item">
-                                        new
-                                    </div>                          
-                                </div>
-                            </div>
-                            <div class="tabs-content clearfix">
-                                <div class="tab-info active">
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/home_9/cruise_1.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/detail/popular_1.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/detail/popular_2.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>  
-                                </div>
-                                <div class="tab-info">
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/detail/popular_2.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>                                 
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/home_9/cruise_1.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/detail/popular_1.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>    
-                                </div>
-                                <div class="tab-info">
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/detail/popular_1.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>                                
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/home_9/cruise_1.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>
-                  <div class="hotel-small style-2 clearfix">
-                    <a class="hotel-img black-hover" href="#">
-                      <img class="img-responsive radius-0" src="img/detail/popular_2.jpg" alt="">
-                      <div class="tour-layer delay-1"></div>                    
-                    </a>
-                    <div class="hotel-desc">
-                      <div class="tour-info-line">
-                        <div class="tour-info">
-                            <img src="img/calendar_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">03/07/2015</span>
-                          </div>        
-                      </div>
-                        <h4>cruises reviews</h4>
-                      <div class="tour-info-line clearfix">
-                        <div class="tour-info">
-                            <img src="img/people_icon_grey.png" alt="">
-                            <span class="font-style-2 color-dark-2">By Emma Stone</span>
-                          </div>          
-                      </div>                    
-                    </div>
-                  </div>                    
-                                </div>     
-                            </div>
-                        </div>  
-          </div>
+ 
           <div class="sidebar-block type-2">
             <div class="widget-slider arrows">
               <div class="swiper-container" data-autoplay="0" data-loop="1" data-speed="900" data-center="0" data-slides-per-view="1">
@@ -625,34 +337,7 @@
           <div class="col-md-4 sidebar">
             <aside class="sb-right pb-50-imp">
               
-              <div class="cws-widget">
-                <div class="widget-categories">
-                  <h2 class="widget-title">Categorias</h2>
-                  <ul>
-                        @foreach($tipocategoria as $item)
-                            <li class="cat-item cat-item-1"><a href="{{route('blogPorCategoria',['blog'=>$item->nombre])}}">{{$item->nombre}}</a></li>
-                        @endforeach 
-                  </ul>
-                </div>
-              </div>
-              <!-- ! widget category-->
-              <!-- widget post-->
-              <div class="cws-widget">
-                <div class="widget-post">
-                  <h2 class="widget-title alt">POST POPULARES</h2>
-                  <!-- item recent post-->
-                  @foreach($post as $item)
-                  <div class="item-recent clearfix">
-                    <div class="widget-post-media"><img src="{{$item->urlimagen}}" data-at2x="pic/blog/80x80/1@2x.jpg" alt style="width:80px; height:80px"></div>
-                    <h3 class="title"><a href="{{route('detalleBlog',['blog'=>$item->url])}}">{!!str_limit($item->titulo,60)!!}.</a></h3>
-                    <div class="date-recent">{{$item->fechaPublicacion}} </div>
-                  </div>
-                  <div></div>
-                  @endforeach
-             
-                  <!-- ! item recent post-->
-                </div>
-              </div>
+              
               <!-- ! widget post-->
               <!-- widget tags-->
               <div class="cws-widget">
@@ -667,39 +352,7 @@
                   </div>
                 </div>
               </div>
-              <!-- ! widget tags-->
-              <!-- widget comments-->
-                <!-- <div class="cws-widget">
-                  <div class="widget-comments">
-                    <h2 class="widget-title">Recent Comments</h2>
-                    <ul>
-                      <li>
-                        <div class="widget-comments-title"><a href="#">Phillip Ferguson </a>on <a href="#" class="title">Nullam interdum orci vitae mi mollis</a></div>
-                        <p>Nullam a porta massa. Sed elit purus, mollis id sollicitudin ac diam...</p>
-                      </li>
-                      <li>
-                        <div class="widget-comments-title"><a href="#">Phillip Ferguson </a>on <a href="#" class="title">Integer in lacus id nisi posuere euismod</a></div>
-                        <p>Praesent et convallis purus, laoreet mattis sapien. Sed bibendum ante...</p>
-                      </li>
-                      <li>
-                        <div class="widget-comments-title"><a href="#">Phillip Ferguson </a>on <a href="#" class="title">Quisque viverra ipsum a felis gravida auctor</a></div>
-                        <p>Proin non ipsum ipsum. Nam varius arcu et metus pellentesque, ac lobortis...</p>
-                      </li>
-                      <li>
-                        <div class="widget-comments-title"><a href="#">Phillip Ferguson </a>on <a href="#" class="title">Donec id nibh vel ante tempus egestas</a></div>
-                        <p>Proin mollis nibh elit, in dapibus ligula tristique eu. Quisque varius ante...</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-              <!-- ! widget comments-->
-              <!-- widget calendar-->
-                <!-- <div class="cws-widget">
-                  <div class="widget-calendar">
-                    <div id="calendar"></div>
-                  </div>
-                </div> -->
-              <!-- ! widget calendar-->
+              
             </aside>
           </div>
         </div>

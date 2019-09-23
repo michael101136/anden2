@@ -281,7 +281,8 @@
         </div>
       </div>
     </div> -->
-       
+    
+<!--
 
     <div class="main-wraper">
       <div class="container-fluid">
@@ -302,7 +303,7 @@
               <img src="{{$item->img}}" alt="" style="height: 250px">
                  <div class="vertical-align">
                      <div class="photo-title">
-                       <!--<h4 class="delay-1"><b>Only <span class="color-aqua">$235</span></b></h4> -->
+                       <h4 class="delay-1"><b>Only <span class="color-aqua">$235</span></b></h4> 
                       <a class="hover-it" href="{{route('detalletour',['tour'=>$item->slug])}}"><h3>{{$item->nombretour}}</h3></a>
                        <h5 class="delay-1">{{$item->categoriatour}}</h5>
                    </div>
@@ -310,10 +311,57 @@
             </div>
           </div>
           @endforeach 
-
         </div>
     </div>
+    </div> -->
+    <!-- GAL-ITEM-->
+<div class="main-wraper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <div class="second-title">
+         
+          <h2>Beautiful tours</h2>
+          <p class="color-grey">El mundo es demasiado bonito como para viajar sólo por internet.</p>
+        </div>
+      </div>
     </div>
+    <div class="isotope-container row row10">
+      <div class="grid-sizer col-mob-12 col-xs-6 col-sm-3"></div>
+      @foreach($data as $item)
+      <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
+        <a class="black-hover hover-aqua" href="{{route('detalletour',['tour'=>$item->slug])}}">
+          <img class="img-full img-responsive" src="{{$item->img}}" alt="" style="height: 215px">
+          <div class="tour-layer delay-1"> </div>
+          <div class="vertical-align">
+            <div class="date color-white"> <strong>{{$item->categoriatour}}</strong> </div>
+            <h4 class="hover-it color-white"><b>{{$item->nombretour}}</b></h4>
+          </div>
+        </a>
+         <div class="vertical-align">
+              <div class="photo-title">
+                       <h4 class="delay-1"><b>Only <span class="color-aqua">$235</span></b></h4> 
+                      <a class="hover-it" href="{{route('detalletour',['tour'=>$item->slug])}}"><h3>{{$item->nombretour}}</h3></a>
+                       <h5 class="delay-1">{{$item->categoriatour}}</h5>
+              </div>
+          </div>
+      </div>
+      @endforeach
+      <!--
+      <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-6">
+        <a class="black-hover" href="detail.html">
+          <img class="img-full img-responsive" src="/plantilla/img/home_7/gal_6.jpg" alt="">
+          <div class="tour-layer delay-1"></div>
+          <div class="vertical-align">
+            <div class="date color-white">July <strong>19th</strong> to July <strong>2</strong></div>
+            <h4 class="color-white"><b>tours in monaco</b></h4>
+          </div>
+        </a>
+      </div> -->
+
+    </div>
+  </div>
+</div>
     <!--inicio responsabilidad social -->
      <div class="main-wraper" style="margin-top: 60px;">
       <div class="row">
@@ -334,8 +382,8 @@
                <div class="row">
                 <div class="col-md-12">
                     <div class="slider-tour padd-90-90">
-                      <h3>RESPONSABILIDAD SOCIAL</h3>
-                      <h2> Ofrecemos los mejores programas culturales y de naturaleza, un servicio de alta calidad a un costo razonable.</h2> 
+                      <h2>RESPONSABILIDAD SOCIAL</h2>
+                      <h3> Ofrecemos los mejores programas culturales y de naturaleza, un servicio de alta calidad a un costo razonable.</h3> 
                        <h5><b>TCR  </b> </h5>
                       </div>  
                 </div>

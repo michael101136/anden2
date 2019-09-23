@@ -1,8 +1,8 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-<div class="top-baner arrows" style="margin-top:120px; ">
-  <div class="swiper-container" data-autoplay="0" data-loop="1" data-speed="1000" data-center="0" data-slides-per-view="1" id="tour-slide-2">
+<div class="top-baner arrows" style="margin-top:0px">
+  <div class="swiper-container" data-autoplay="0" data-loop="1" data-speed="1000" data-center="0" data-slides-per-view="1" id="tour-slide-2" style="height:300px; background-color: black; opacity: 0.6" >
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="inner-banner style-3">

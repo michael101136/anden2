@@ -327,6 +327,24 @@
       </div>
     </div>
     <div class="isotope-container row row10">
+<div class="row">
+@foreach($data as $item)
+          <div class="col-md-6 col-sm-3 col-xs-12">
+            <div class="radius-mask popular-img">
+              <div class="clip">
+                <div class="bg bg-bg-chrome act" style="background-image:url({{$item->img}})">
+                </div>
+               </div>
+               <div class="tour-layer delay-1"></div>
+               <div class="vertical-bottom">
+                 <h4><a href="{{route('detalletour',['tour'=>$item->slug])}}">{{$item->nombretour}}</a></h4>
+                          <h5><b class="color-aqua">{{$item->categoriatour}}</b> </h5>
+                   </div>
+              </div>
+            </div>
+ @endforeach
+</div>
+<div class="row">
       <div class="grid-sizer col-mob-12 col-xs-6 col-sm-3"></div>
       @foreach($data as $item)
       <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
@@ -347,6 +365,7 @@
           </div>
       </div>
       @endforeach
+    </div>     
       <!--
       <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-6">
         <a class="black-hover" href="detail.html">
@@ -514,7 +533,79 @@
     </div>
   </div>
 <!-- inicio de testimoinios --> 
-       
+<div class="main-wraper padd-90">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <div class="second-title">
+              <h2>best propouses for you</h2>
+              <p class="color-grey"> Nos encanta viajar por el Perú para descubrir su riqueza natural y cultural. Queremos contagiarte esta pasión y entusiasmo para que disfrutes al máximo la belleza del país y sus tesoros ocultos. ¡Únete a esta aventura y tomemos juntos el mismo camino!</p>
+            </div>
+        </div>
+      </div>
+      <div class="row isotope-container">
+        <div class="grid-sizer col-xs-12 col-sm-3"></div>
+          <div class="item col-xs-12 col-md-6">
+          <div class="row">
+                <div class="top-baner arrows">
+              <div class="swiper-container offers-slider" data-autoplay="0" data-loop="1" data-speed="500" data-slides-per-view="1">
+                  <div class="swiper-wrapper">
+                    @foreach($blogs as $blog)
+                  <div class="swiper-slide" data-val="0">
+                    <div class="tour-block tour-block-s-6 radius-5 underline-block hover-blue">
+                        <div class="tour-layer delay-1"></div> 
+                      <img class="center-image"  src="{{$blog->urlimagen}}" alt="">
+                      <div class="tour-caption">
+                        <div class="vertical-align">
+                          <h4>{{$blog->fechaPublicacion}}</h4>
+                          <h3 class="underline hover-it">{{$blog->titulo}}</h3>
+                          <p class="color-blue">   </p> 
+                          <a href="{{route('detalleBlog',['blog'=>$blog->url])}}" class="c-button b-50 bg-white"><span>view more</span></a> 
+                        </div>
+                      </div>
+                    </div>              
+                  </div>
+                  @endforeach
+                </div>
+                  <div class="pagination  poin-style-1 pagination-hidden"></div>
+              </div>
+                    <div class="swiper-arrow-left offers-arrow color-2"><span class="fa fa-angle-left"></span></div>
+                <div class="swiper-arrow-right offers-arrow color-2"><span class="fa fa-angle-right"></span></div>  
+            </div>
+          </div>
+          </div>          
+        <div class="item col-xs-12 col-md-6">
+          <div class="tour-block tour-block-s-7 radius-5 underline-block hover-blue">
+              <div class="tour-layer delay-1"></div> 
+              <img class="center-image" src="/plantilla/img/oferta1.jpg" alt="">
+            <div class="tour-caption">
+              <div class="vertical-align">
+                <h4>sale <span class="color-blue">-20%</span></h4> 
+                <h3 class="underline hover-it">bora bora for HONEYMOON</h3>
+                <p class="color-white-light">Cursus libero purus ac cursus ut sed.Nunc cursus libero purus ac<br> congue arcu cursus ut sed vitae pulvinar.</p>                  
+              </div>
+            </div>
+            </div>
+          </div>
+        <div class="item col-xs-12 col-md-6">
+          <div class="tour-block tour-block-s-8 radius-5 hover-blue">
+              <div class="tour-layer delay-1"></div> 
+              <img class="center-image" src="/plantilla/img/oferta2.jpg" alt="">
+            <div class="tour-caption">
+              <div class="vertical-align">
+                <div class="tb_category">hot sale</div> 
+                <h3 class="hover-it">Disney Fantasy cruise</h3>
+                <h4>only from <span class="color-blue">$860</span></h4>                  
+              </div>
+            </div>
+            </div>
+          </div>                                            
+      </div>      
+    </div>
+  </div>
+
+
+  <!--     
     <div class="main-wraper padd-90">
       <div class="container">
         <div class="row">
@@ -566,7 +657,7 @@
           </div>
         </div>
         
-    </div>
+    </div>-->
   </div>   
 
 @endsection

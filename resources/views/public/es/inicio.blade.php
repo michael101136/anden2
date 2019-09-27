@@ -15,7 +15,7 @@
               <div class="row">
                 <div class="col-md-12">
                 <div class="main-title vert-title">
-                  <h1 class="color-white delay-1">the best way to predict the future is to invent it</h1>
+                  <h1 class="color-white delay-1" style="text-shadow: black 0.1em 0.1em 0.2em">the best way to predict the future is to invent it</h1>
                   <p class="color-white-op delay-2"></p>
                   <a href="#" class="c-button bg-aqua hv-transparent delay-2"><img src="/plantilla/img/loc_icon.png" alt="">
                     <span>view our tours</span>
@@ -36,7 +36,7 @@
               <div class="row">
                 <div class="col-md-12">
                 <div class="main-title vert-title">
-                  <h1 class="color-white delay-1">Where would you like to go?</h1>
+                  <h1 class="color-white delay-1" style="text-shadow: black 0.1em 0.1em 0.2em">Where would you like to go?</h1>
                   <p class="color-white-op delay-2"></p>
                   <a href="#" class="c-button bg-aqua delay-2"><img src="assets/img/loc_icon.png" alt=""><span>view our tours</span></a>
                  </div>
@@ -329,7 +329,7 @@
     <div class="isotope-container row row10">
 <div class="row">
 @foreach($data as $item)
-          <div class="col-md-6 col-sm-3 col-xs-12">
+          <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="radius-mask popular-img">
               <div class="clip">
                 <div class="bg bg-bg-chrome act" style="background-image:url({{$item->img}})">
@@ -337,14 +337,15 @@
                </div>
                <div class="tour-layer delay-1"></div>
                <div class="vertical-bottom">
-                 <h4><a href="{{route('detalletour',['tour'=>$item->slug])}}">{{$item->nombretour}}</a></h4>
+                 <h4 style="text-shadow: black 0.1em 0.1em 0.2em"><a href="{{route('detalletour',['tour'=>$item->slug])}}">{{$item->nombretour}}</a></h4>
                           <h5><b class="color-aqua">{{$item->categoriatour}}</b> </h5>
                    </div>
               </div>
             </div>
  @endforeach
 </div>
-<div class="row">
+<!--
+    <div class="row">
       <div class="grid-sizer col-mob-12 col-xs-6 col-sm-3"></div>
       @foreach($data as $item)
       <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-3">
@@ -365,7 +366,7 @@
           </div>
       </div>
       @endforeach
-    </div>     
+    </div> -->
       <!--
       <div class="item gal-item col10 col-mob-12 col-xs-6 col-sm-6">
         <a class="black-hover" href="detail.html">
@@ -383,14 +384,14 @@
 </div>
     <!--inicio responsabilidad social -->
      <div class="main-wraper" style="margin-top: 60px;">
-      <div class="row">
+      <!--<div class="row">
           <div class="col-md-12">
             <div class="second-title">
               <h2>RESPONSABILIDAD SOCIAL</h2>
                 <p class="color-grey">El mundo es demasiado bonito como para viajar sólo por internet.</p>
             </div>
           </div>
-        </div>
+        </div>-->
       <div class="clip">
         <div class="bg bg-bg-chrome" style="background-image:url(/plantilla/img/home_1/tour_slider_bg.jpg); height:100%; "> </div>
       </div>
@@ -402,8 +403,10 @@
                 <div class="col-md-12">
                     <div class="slider-tour padd-90-90">
                       <h2>RESPONSABILIDAD SOCIAL</h2>
-                      <h3> Ofrecemos los mejores programas culturales y de naturaleza, un servicio de alta calidad a un costo razonable.</h3> 
-                       <h5><b>TCR  </b> </h5>
+                      <h4> Ofrecemos los mejores programas culturales y de naturaleza, un servicio de alta calidad.
+                            Somos operadores oficiales del Camino Inca a Machu Picchu, bajo los nuevos lineamientos estipulados por el gobierno peruano, diseñados para administrar el Santuario Histórico de Machu Picchu de una manera ecológica y para proteger los derechos de los porteadores.
+                            Garantizamos nuestros precios, porque nosotros mismos somos los operadores de nuestros viajes, tanto en la selva como en los Andes.</h4> 
+                       <h5><b>  </b> </h5>
                       </div>  
                 </div>
                </div>
@@ -414,10 +417,13 @@
                <div class="row">
                 <div class="col-md-12">
                     <div class="slider-tour padd-94-94">
-                    <h3>ACERCA DE NOSOTROS</h3>
-                      
-                <h2>L</h2> 
-                 <h5>july <b>19th</b> to july <b>26th</b></h5>
+                    <h2>ACERCA DE NOSOTROS</h2>   
+                    <h4>A continuación enumeramos algunas de las razones por las cuales,  muchos visitantes prefieren realizar un viaje con Andean Adventures Perú:
+                     Nuestro personal está compuesto por profesionales en la industria del Turismo, con preparación académica y experiencia necesaria.
+                     Nuestros guías son experimentados y poseen conocimientos especializados en diversos campos. Todos ellos reciben formación continua para mantener y mejorar sus conocimientos.
+                     Nuestros viajes son guiados por nuestro propio personal; guías locales y también Conductores de viajes (Tour leaders) para los viajes largos.
+                      Realizamos visitas a lugares extraordinarios, raramente frecuentados por la mayoría de los viajeros.</h4> 
+                     <h5> <b>  </b></h5>
                       </div>  
                 </div>
                </div>
@@ -450,13 +456,7 @@
                     <div class="tour-weather">sea tour</div>
                   </div>
                   <div class="tour-desc bg-white">
-                    <div class="rate">
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      </div>
+                   
                     <img class="tm-people" src="/plantilla/img/default-cliente.jpg" alt="">
                     <h4><a class="tour-title color-dark-2 link-green" href="#">inna lunoe</a></h4>
                     <div class="tour-text color-grey-3">“Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa rta nequetiam.”</div>
@@ -470,13 +470,7 @@
                     <div class="tour-weather">mountains</div>
                   </div>
                   <div class="tour-desc bg-white">
-                    <div class="rate">
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      </div>                  
+                                     
                     <img class="tm-people" src="/plantilla/img/default-cliente.jpg" alt="">
                     <h4><a class="tour-title color-dark-2 link-green" href="#">alina, mark</a></h4>
                     <div class="tour-text color-grey-3">“Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa rta nequetiam.”</div>
@@ -490,13 +484,7 @@
                     <div class="tour-weather">sea tour</div>
                   </div>
                   <div class="tour-desc bg-white">
-                    <div class="rate">
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      </div>                  
+                                     
                     <img class="tm-people" src="/plantilla/img/default-cliente.jpg" alt="">
                     <h4><a class="tour-title color-dark-2 link-green" href="#">george ross</a></h4>
                     <div class="tour-text color-grey-3">“Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa rta nequetiam.”</div>
@@ -510,13 +498,7 @@
                     <div class="tour-weather">mountains</div>
                   </div>
                   <div class="tour-desc bg-white">
-                    <div class="rate">
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      <span class="fa fa-heart color-green"></span>
-                      </div>                  
+                                      
                     <img class="tm-people" src="/plantilla/img/default-cliente.jpg" alt="">
                     <h4><a class="tour-title color-dark-2 link-green" href="#">mikel, kim</a></h4>
                     <div class="tour-text color-grey-3">“Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa rta nequetiam.”</div>
@@ -558,7 +540,7 @@
                       <div class="tour-caption">
                         <div class="vertical-align">
                           <h4>{{$blog->fechaPublicacion}}</h4>
-                          <h3 class="underline hover-it">{{$blog->titulo}}</h3>
+                          <h3 class="underline hover-it" style="text-shadow: black 0.1em 0.1em 0.2em">{{$blog->titulo}}</h3>
                           <p class="color-blue">   </p> 
                           <a href="{{route('detalleBlog',['blog'=>$blog->url])}}" class="c-button b-50 bg-white"><span>view more</span></a> 
                         </div>

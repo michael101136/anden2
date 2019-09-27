@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="top-baner arrows" style="margin-top:0px">
-  <div class="swiper-container" data-autoplay="0" data-loop="1" data-speed="1000" data-center="0" data-slides-per-view="1" id="tour-slide-2" style="height:300px; background-color: black; opacity: 0.6" >
+  <div class="swiper-container" data-autoplay="0" data-loop="1" data-speed="1000" data-center="0" data-slides-per-view="1" id="tour-slide-2" style="height:320px; " >
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
+      <div class="swiper-slide" >
         <div class="inner-banner style-3">
-          <img class="center-image" src="/plantilla/img/bg-tradicional.jpg" alt="">
+          <img class="center-image" src="/plantilla/img/bg-tours.jpg" style="background-color: rgba(0,0,0,0.8);  filter:brightness(0.4);" alt="">
           <div class="vertical-align">
             <div>                 
-                <h2 class="color-white">Tours tradicionales </h2>
+                <h2 class="color-white"><br>Tours  </h2>
                 <h3 class="color-white"><span>from $960 /</span> person</h3>
             </div>
           </div>
@@ -17,11 +17,11 @@
       </div>
       <div class="swiper-slide">
             <div class="inner-banner style-3">
-              <img class="center-image" src="/plantilla/img/bg-vivencial.jpg" alt="">
+              <img class="center-image" src="/plantilla/img/bg-tours.jpg" alt="">
               <div class="vertical-align">
                 <div class="container">
                                     
-                  <h2 class="color-white">Tours vivenviales</h2>
+                  <h2 class="color-white"><br>Tours </h2>
                   <h3 class="color-white"><span>from $1960 /</span> person</h3>
                 </div>
               </div>

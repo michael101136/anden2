@@ -2945,7 +2945,7 @@ nav li.type-4 .dropmenu .fa-chevron-right { display: none; }
 
 .contact-info h4 { font-size: 18px; line-height: 22px; margin-bottom: 22px; }
 
-.contact-info .contact-line { font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 18px; font-weight: 700; margin-bottom: 33px; }
+.contact-info .contact-line { font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 18px; font-weight: 700; margin-bottom: 25px; }
 
 .contact-info .contact-line img { margin-right: 20px; vertical-align: middle; }
 
@@ -4138,7 +4138,7 @@ footer { position: relative; width: 100%; padding-top: 70px; overflow: hidden;}
 
 .logo-footer { margin-top: -7px; margin-bottom: 43px; }
 
-.footer-block { position: relative; width: 100%; margin-bottom: 70px; float: left; padding-right: 15px; padding-left: 15px; }
+.footer-block { position: relative; width: 100%; margin-bottom: 50px; float: left; padding-right: 15px; padding-left: 15px; }
 
 .row30 .footer-block { padding-right: 30px; padding-left: 30px; }
 

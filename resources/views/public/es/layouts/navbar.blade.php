@@ -26,8 +26,8 @@
               <li class="type-1"><a href="/contacto">CONTACTO<span></span></a></li>
               <li class="type-1"><a href="#">LENGUAJE<span class="fa fa-angle-down"></span></a>
                 <ul class="dropmenu">
-                  <li><a href="/es">ESPAÑOL</a></li>
-                      <a href="/en">ENGLISH<span class="fa fa-chevron-right"></span></a>
+                  <li><a href="/es">ESPAÑOL</a>
+                      <a href="/en">ENGLISH</a>
                   </li>
                 </ul>
               </li>

@@ -92,6 +92,7 @@
 {!!Html::script('plantilla/js/jquery.mousewheel.min.js')!!}
 {!!Html::script('plantilla/js/jquery.viewportchecker.min.js')!!}
 {!!Html::script('plantilla/js/isotope.pkgd.min.js')!!}
+{!!Html::script('plantilla/js/map.js')!!}
 {!!Html::script('plantilla/js/all.js')!!}
 
   </body>

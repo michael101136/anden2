@@ -15,7 +15,7 @@ class PublicController extends Controller
              ->join('tour_categoria','tour_categoria.tour_id','=','tours.id')
              ->join('tipo_categoria_tours','tipo_categoria_tours.id','=','tour_categoria.categoria_id')
               ->where('tours.principal','=','1')
-             ->paginate(6);
+             ->paginate(8);
 
         $blogs = DB::table('blogs')
          ->select('blogs.url','blogs.descripcioncorta','blogs.fechaPublicacion','blogs.id','blogs.titulo','blogs.contenido','blogs.urlimagen','categoria_blogs.nombre as tipoblog')
@@ -141,7 +141,7 @@ class PublicController extends Controller
               ->join('tour_categoria','tour_categoria.tour_id','=','tours.id')
               ->join('tipo_categoria_tours','tipo_categoria_tours.id','=','tour_categoria.categoria_id')
               ->where('tipo_categoria_tours.id','=',$id) 
-              ->paginate(3);
+              ->paginate(4);
        
        
         if($request->ajax()) 
@@ -156,6 +156,13 @@ class PublicController extends Controller
 
     public function toursCategoria($es='',$categoria='')
     {
+       $blogs = DB::table('blogs')
+         ->select('blogs.url','blogs.descripcioncorta','blogs.fechaPublicacion','blogs.id','blogs.titulo','blogs.contenido','blogs.urlimagen','categoria_blogs.nombre as tipoblog')
+         ->join('categoria_blogs','categoria_blogs.id','=','blogs.categoria_blog_id')  
+         ->orderby('fechaPublicacion','DESC') ->take(4)->get(); 
+       
+    return view('public.es.inicio',['data'=>$data,'blogs'=>$blogs]);
+
         $idCategoria=DB::table('tipo_categoria_tours')
                           ->select('id')
                           ->where('nombre','=',$categoria)
@@ -173,7 +180,7 @@ class PublicController extends Controller
                   ->join('tour_categoria','tour_categoria.tour_id','=','tours.id')
                   ->join('tipo_categoria_tours','tipo_categoria_tours.id','=','tour_categoria.categoria_id')
                   ->where('tipo_categoria_tours.id','=',$id) 
-                  ->paginate(3);
+                  ->paginate(4);
        
         return response()->json(view("public.es.tour.categoria.categoria",compact('data'))->render());     
          

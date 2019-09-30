@@ -9,23 +9,11 @@
           <img class="center-image" src="/plantilla/img/bg-tours.jpg" style="background-color: rgba(0,0,0,0.8);  filter:brightness(0.4);" alt="">
           <div class="vertical-align">
             <div>                 
-                <h2 class="color-white"><br>Tours  </h2>
+                <h2 class="color-white" style="text-shadow: black 0.1em 0.1em 0.2em" ><br>Tours  </h2>
                 <h3 class="color-white"><span>from $960 /</span> person</h3>
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-            <div class="inner-banner style-3">
-              <img class="center-image" src="/plantilla/img/bg-tours.jpg" alt="">
-              <div class="vertical-align">
-                <div class="container">
-                                    
-                  <h2 class="color-white"><br>Tours </h2>
-                  <h3 class="color-white"><span>from $1960 /</span> person</h3>
-                </div>
-              </div>
-            </div>
       </div>                               
     </div>
     <div class="pagination pagination-hidden poin-style-1"></div>
@@ -157,7 +145,7 @@
             </div>
               
            {!! $data->render() !!}
-            <div class="c_pagination clearfix padd-120">
+           <div class="c_pagination clearfix padd-120">
             <a href="#" class="c-button b-40 bg-dr-blue-2 hv-dr-blue-2-o fl">prev page</a>
             <a href="#" class="c-button b-40 bg-dr-blue-2 hv-dr-blue-2-o fr">next page</a>
             <ul class="cp_content color-3">

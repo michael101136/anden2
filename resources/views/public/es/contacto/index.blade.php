@@ -1,7 +1,13 @@
 @extends('public.es.layouts.master')
 
 @section('content')
-
+<!-- MAP BLOCK -->
+<div class="map-block">
+  <div id="map-canvas" class="style-4" data-lat="33.664467" data-lng="-117.601586" data-zoom="10" data-style="2"></div>
+    <div class="addresses-block">
+        <a data-lat="33.664467" data-lng="-117.601586" data-string="Santa Monica Hotel"></a>
+    </div>
+</div>
 <!-- CONTACT- -->
 <div class="main-wraper padd-90">
   <div class="container">
@@ -20,7 +26,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <form  action="php/contacts-process.php" method="post" class="contact-form">
+        {!! Form::open(['route' => ['contacto-informacion.store'] , 'method' => 'POST', 'class' => 'contact-form','id' => "formEnvio"]) !!}
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="input-style-1 type-2 color-2">
@@ -39,7 +45,7 @@
               </div>
             </div>
           </div>          
-        </form>
+        {!! Form::close() !!} 
       </div>
     </div>
   </div>
@@ -93,17 +99,12 @@
   </div>
 </div>
 
-     <!-- <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.0501372233057!2d-71.96276460039489!3d-13.532514651103106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5faad2fcf35%3A0x41d3623d466dc332!2sEasy+Wash!5e0!3m2!1ses!2spe!4v1561503356877!5m2!1ses!2spe" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-             
-            </div> -->
-
-
-    
-
-
-
 @endsection
 
 @section('script')
+
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxJnaq8H2Ib6E0bBT1sTnSnGZ5tqONxFI&amp;callback">
+</script>
+<script src="/assets/js/map.js"></script>
+
 @endsection

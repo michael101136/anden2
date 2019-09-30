@@ -7,16 +7,14 @@
 
 @section('content')
 <!-- INNER-BANNER -->
-<div class="inner-banner style-6" style="margin-top: 120px;">
+<div class="inner-banner ">
   <img class="center-image" src="/plantilla/img/bg_blog.jpg" alt="">
   <div class="vertical-align">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <ul class="banner-breadcrumb color-white clearfix">
-              <li><a class="link-blue-2" href="#">home</a> /</li>
-              <li><a class="link-blue-2" href="#">blog</a> /</li>
-              <li><span>blog detail</span></li>
+              <li><span></span></li>
             </ul>
             <h2 class="color-white">blog</h2>
           </div>

@@ -142,9 +142,9 @@ Route:: POST('/saveCambioImagenBlog',
 	'as' => 'blog.cambioImagen'
 ]);
 
-// Route::get('/contacto', 'PublicController@contacto');
+ Route::get('/contacto', 'PublicController@contacto');
 
 
 
 Route::resource('contacto-informacion','contactoController');
-Route::post('contacto/','contactoController@contacto')->name('contacto');
+Route::post('/contacto','contactoController@contacto')->name('contacto');

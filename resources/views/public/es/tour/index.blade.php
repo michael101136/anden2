@@ -35,50 +35,7 @@
           <li><span class="color-dr-blue">list hotels</span></li>
         </ul>     
         <div class="row">
-          <div class="col-xs-12 col-sm-4 col-md-3">
-            <div class="sidebar bg-white clearfix">
-            <!--<div class="sidebar-block">
-              <h4 class="sidebar-title color-dark-2">search</h4>
-              <div class="search-inputs">
-                <div class="form-block clearfix">
-                  <div class="input-style-1 b-50 color-3">
-                    <img src="img/loc_icon_small_grey.png" alt="">
-                    <input type="text" placeholder="Where do you want to go?">
-                  </div>
-                </div>              
-                <div class="form-block clearfix">
-                  <div class="input-style-1 b-50 color-3">
-                    <img src="img/calendar_icon_grey.png" alt="">
-                    <input type="text" placeholder="Check In" class="datepicker">
-                  </div>          
-                </div>
-                <div class="form-block clearfix">
-                  <div class="input-style-1 b-50 color-3">
-                    <img src="img/calendar_icon_grey.png" alt="">
-                    <input type="text" placeholder="Check Out" class="datepicker">
-                  </div>          
-                </div>
-              </div>
-              <input type="submit" class="c-button b-40 bg-dr-blue-2 hv-dr-blue-2-o" value="search">        
-            </div>-->
-            <div class="sidebar-block">
-              <h4 class="sidebar-title color-dark-2">categories</h4>
-              <ul class="sidebar-category color-3">
-                <li class="active">
-                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/3.jpg" onclick="listar_categorias('tradicional');" data-at2x="/public/tours/categoria/3.jpg" alt>
-                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('tradicional');">TRADICIONAL</a><span style="width:80%"></span></h3>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/4.jpg" onclick="listar_categorias('vivencial');" data-at2x="/public/tours/categoria/4.jpg" alt>
-                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('vivencial');">VIVENCIAL</a><span style="width:80%"></span></h3>
-                  </div>                
-                </li>               
-              </ul>
-            </div>             
-                     
-            </div>
-          </div>
+
           <div class="col-xs-12 col-sm-8 col-md-9">
             <div class="list-header clearfix">
                 <div class="drop-wrap drop-wrap-s-4 color-4 list-sort">
@@ -157,6 +114,56 @@
               <li><a href="#">10</a></li>
             </ul>
             </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            
+               <div class="sidebar-block type-2">
+            <h4 class="sidebar-title color-dark-2">popular posts</h4>
+            <div class="widget-popular">
+              @foreach($blogs as $blog1)
+              <div class="hotel-small style-2 clearfix">
+                <a class="hotel-img black-hover" href="{{route('detalleBlog',['blog'=>$blog1->url])}}">
+                  <img class="img-responsive radius-0" src="{{$blog1->urlimagen}}" alt="">
+                  <div class="tour-layer delay-1"></div>                    
+                </a>
+                <div class="hotel-desc">
+                  <div class="tour-info-line">
+                    <div class="tour-info">
+                        <img src="/plantilla/img/calendar_icon_grey.png" alt="">
+                        <span class="font-style-2 color-dark-2">{{$blog1->fechaPublicacion}}</span>
+                      </div>
+                    <div class="tour-info">
+                        <img src="/plantilla/img/people_icon_grey.png" alt="">
+                        <span class="font-style-2 color-dark-2">By {{$blog1->autor}}</span>
+                      </div>          
+                  </div>
+                    <h4>{!!str_limit($blog1->titulo,60)!!}</h4>
+                                     
+                </div>
+              </div>
+              @endforeach
+                                           
+            </div>
+          </div>
+            <!--
+            <div class="sidebar-block">
+              <h4 class="sidebar-title color-dark-2">categories</h4>
+              <ul class="sidebar-category color-3">
+                <li class="active">
+                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/3.jpg" onclick="listar_categorias('tradicional');" data-at2x="/public/tours/categoria/3.jpg" alt>
+                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('tradicional');">TRADICIONAL</a><span style="width:80%"></span></h3>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-top-sellers clearfix"><img src="/public/tours/categoria/4.jpg" onclick="listar_categorias('vivencial');" data-at2x="/public/tours/categoria/4.jpg" alt>
+                    <h3 class="title"><a href="javascript:;" onclick="listar_categorias('vivencial');">VIVENCIAL</a><span style="width:80%"></span></h3>
+                  </div>                
+                </li>               
+              </ul>
+            </div> -->            
+                     
+            
           </div>
         </div>
       </div>

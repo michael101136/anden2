@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- INNER-BANNER -->
-<div class="inner-banner style-6" style="margin-top: 120px">
+<div class="inner-banner " >
   <img class="center-image" src="/plantilla/img/bg_blog.jpg" alt="">
   <div class="vertical-align">
     <div class="container">

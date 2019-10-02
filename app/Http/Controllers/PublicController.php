@@ -122,7 +122,9 @@ class PublicController extends Controller
 
    public function tours($es='', $categoria='',Request $request)
    {
-    
+      $blogs = DB::table('blogs')
+         ->select('*')
+         ->take(4)->get(); 
      
       $idCategoria=DB::table('tipo_categoria_tours')
       ->select('id')
@@ -151,7 +153,7 @@ class PublicController extends Controller
     
       
         
-      return view('public.es.tour.index',['data'=>$data,'categoria'=>$categoria]);
+      return view('public.es.tour.index',['data'=>$data,'categoria'=>$categoria,'blogs'=>$blogs]);
    }
 
     public function toursCategoria($es='',$categoria='')
